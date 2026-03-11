@@ -16,6 +16,7 @@ import PartnerDetail from './pages/PartnerDetail'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
 
 const PageLayout = ({ children }) => (
     <div className="relative flex flex-col min-h-screen bg-background">
@@ -24,6 +25,7 @@ const PageLayout = ({ children }) => (
             {children}
         </main>
         <Footer />
+        <WhatsAppButton />
     </div>
 )
 

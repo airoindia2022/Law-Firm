@@ -5,6 +5,29 @@ import { NEWSLETTERS } from '../data'
 
 const Newsletters = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const [result, setResult] = useState("");
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+        formData.append("access_key", "42a840be-ad7f-4564-bfc7-7eadecf04e3e");
+        formData.append("subject", "New Newsletter Subscription (Newsletters Page)");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+        if (data.success) {
+            setResult("Success!");
+            event.target.reset();
+            setTimeout(() => setResult(""), 5000);
+        } else {
+            setResult("Error");
+        }
+    };
     
     const filteredNewsletters = NEWSLETTERS.filter(item => 
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -157,16 +180,18 @@ const Newsletters = () => {
                                     Receive strategic legal briefings designed for global decision-makers. High-impact intelligence, delivered directly.
                                 </p>
                                 
-                                <div className="flex flex-col sm:flex-row gap-4 p-2 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 max-w-md">
+                                <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-4 p-2 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 max-w-md">
                                     <input 
+                                        name="email"
                                         type="email" 
+                                        required
                                         placeholder="Institutional email" 
                                         className="flex-grow bg-transparent border-none px-6 py-4 text-white focus:ring-0 placeholder:text-white/30 text-sm"
                                     />
                                     <button className="px-8 py-4 bg-brand hover:bg-brand-light text-white font-bold rounded-xl transition-all shadow-premium-btn whitespace-nowrap text-xs uppercase tracking-widest">
-                                        Subscribe
+                                        {result || "Subscribe"}
                                     </button>
-                                </div>
+                                </form>
                                 <p className="mt-4 text-[10px] text-white/30 uppercase tracking-[0.2em] ml-2">
                                     Guaranteed privacy. Unsubscribe anytime.
                                 </p>

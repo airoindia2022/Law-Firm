@@ -3,6 +3,29 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, Facebook, Linkedin, Twitter } from 'lucide-react'
 
 const Contact = () => {
+    const [result, setResult] = React.useState("");
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+        formData.append("access_key", "42a840be-ad7f-4564-bfc7-7eadecf04e3e");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            event.target.reset();
+            setTimeout(() => setResult(""), 5000);
+        } else {
+            setResult("Error: " + data.message);
+        }
+    };
+
     return (
         <div className="bg-background min-h-screen subtle-pattern">
             <section className="relative h-[50vh] flex items-center overflow-hidden bg-background">
@@ -38,28 +61,37 @@ const Contact = () => {
                         </div>
                         <p className="text-base text-text-muted mb-12 leading-relaxed max-w-2xl">Secure a confidential consultation with our specialized legal task force. Responses are dispatched within one business cycle.</p>
 
-                        <form className="space-y-8 group bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-soft">
+                        <form onSubmit={onSubmit} className="space-y-8 group bg-white p-8 md:p-10 rounded-[2rem] border border-border shadow-soft">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-secondary uppercase tracking-widest ml-1">Principal Name</label>
-                                    <input type="text" className="w-full bg-surface border border-border rounded-xl px-6 py-4 text-sm text-text-main focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all placeholder:text-text-muted/50" placeholder="Full legal name" />
+                                    <input name="name" required type="text" className="w-full bg-surface border border-border rounded-xl px-6 py-4 text-sm text-text-main focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all placeholder:text-text-muted/50" placeholder="Full legal name" />
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-secondary uppercase tracking-widest ml-1">Corporate Email</label>
-                                    <input type="email" className="w-full bg-surface border border-border rounded-xl px-6 py-4 text-sm text-text-main focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all placeholder:text-text-muted/50" placeholder="institutional@enterprise.com" />
+                                    <input name="email" required type="email" className="w-full bg-surface border border-border rounded-xl px-6 py-4 text-sm text-text-main focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all placeholder:text-text-muted/50" placeholder="institutional@enterprise.com" />
                                 </div>
                             </div>
                             <div className="space-y-2">
                                 <label className="text-xs font-bold text-secondary uppercase tracking-widest ml-1">Jurisdiction / Subject</label>
-                                <input type="text" className="w-full bg-surface border border-border rounded-xl px-6 py-4 text-sm text-text-main focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all placeholder:text-text-muted/50" placeholder="Brief subject of advisory" />
+                                <input name="subject" required type="text" className="w-full bg-surface border border-border rounded-xl px-6 py-4 text-sm text-text-main focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all placeholder:text-text-muted/50" placeholder="Brief subject of advisory" />
                             </div>
                             <div className="space-y-2">
                                 <label className="text-xs font-bold text-secondary uppercase tracking-widest ml-1">Detailed Briefing</label>
-                                <textarea rows="5" className="w-full bg-surface border border-border rounded-xl px-6 py-4 text-sm text-text-main focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all placeholder:text-text-muted/50 resize-none" placeholder="Provide strategic context..."></textarea>
+                                <textarea name="message" required rows="5" className="w-full bg-surface border border-border rounded-xl px-6 py-4 text-sm text-text-main focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all placeholder:text-text-muted/50 resize-none" placeholder="Provide strategic context..."></textarea>
                             </div>
                             <button type="submit" className="btn-primary w-full py-5 text-sm uppercase tracking-widest flex items-center justify-center gap-3">
                                 TRANSMIT INQUIRY <Send className="h-4 w-4" />
                             </button>
+                            {result && (
+                                <motion.p 
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    className={`text-center text-sm font-bold tracking-widest uppercase ${result.includes('Error') ? 'text-red-500' : 'text-brand'}`}
+                                >
+                                    {result}
+                                </motion.p>
+                            )}
                         </form>
                     </div>
                 </div>
