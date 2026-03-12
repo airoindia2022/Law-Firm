@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const WhatsAppButton = () => {
     // Using the Odisha hub number found in Contact.jsx
-    const phoneNumber = "917838945961";
+    const phoneNumber = "917668392730";
     const message = "Hello LexCounsel, I would like to inquire about your legal services.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
