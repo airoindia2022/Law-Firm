@@ -11,7 +11,7 @@ const Newsletters = () => {
         event.preventDefault();
         setResult("Sending....");
         const formData = new FormData(event.target);
-        formData.append("access_key", "0399f4f3-e72e-4690-9d27-84afbf032987");
+        formData.append("access_key", "aada99dc-987c-402c-baac-baf21cef5e62");
         formData.append("subject", "New Newsletter Subscription (Newsletters Page)");
 
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -28,8 +28,8 @@ const Newsletters = () => {
             setResult("Error");
         }
     };
-    
-    const filteredNewsletters = NEWSLETTERS.filter(item => 
+
+    const filteredNewsletters = NEWSLETTERS.filter(item =>
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -40,7 +40,7 @@ const Newsletters = () => {
             <section className="relative pt-32 pb-20 overflow-hidden">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brand/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-                
+
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -71,8 +71,8 @@ const Newsletters = () => {
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-8 border-b border-border">
                             <div className="relative group max-w-md w-full">
                                 <Search className="absolute left-0 top-1/2 -translate-y-1/2 h-5 w-5 text-text-light group-focus-within:text-brand transition-colors" />
-                                <input 
-                                    type="text" 
+                                <input
+                                    type="text"
                                     placeholder="Search newsletters..."
                                     className="w-full bg-transparent border-none pl-8 pr-4 py-2 text-primary focus:ring-0 placeholder:text-text-light/50 text-lg font-light"
                                     value={searchTerm}
@@ -165,7 +165,7 @@ const Newsletters = () => {
                             <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-[120px]"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2"></div>
                         </div>
-                        
+
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
                             <div>
                                 <div className="flex items-center gap-2 mb-6">
@@ -179,13 +179,13 @@ const Newsletters = () => {
                                 <p className="text-white/70 text-lg mb-10 max-w-lg">
                                     Receive strategic legal briefings designed for global decision-makers. High-impact intelligence, delivered directly.
                                 </p>
-                                
+
                                 <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-4 p-2 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 max-w-md">
-                                    <input 
+                                    <input
                                         name="email"
-                                        type="email" 
+                                        type="email"
                                         required
-                                        placeholder="Institutional email" 
+                                        placeholder="Institutional email"
                                         className="flex-grow bg-transparent border-none px-6 py-4 text-white focus:ring-0 placeholder:text-white/30 text-sm"
                                     />
                                     <button className="px-8 py-4 bg-brand hover:bg-brand-light text-white font-bold rounded-xl transition-all shadow-premium-btn whitespace-nowrap text-xs uppercase tracking-widest">
@@ -196,7 +196,7 @@ const Newsletters = () => {
                                     Guaranteed privacy. Unsubscribe anytime.
                                 </p>
                             </div>
-                            
+
                             <div className="grid grid-cols-2 gap-6">
                                 {[
                                     { label: 'Strategic', sub: 'Insights', icon: BarChart3 },

@@ -9,7 +9,7 @@ const Footer = () => {
         event.preventDefault();
         setResult("Sending....");
         const formData = new FormData(event.target);
-        formData.append("access_key", "0399f4f3-e72e-4690-9d27-84afbf032987");
+        formData.append("access_key", "aada99dc-987c-402c-baac-baf21cef5e62");
         formData.append("subject", "New Newsletter Subscription (Footer)");
 
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -129,18 +129,18 @@ const Footer = () => {
 
                 </div>
 
-            {/* Bottom Bar */}
-            <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
-                <p className="text-white/30 text-[11px] font-bold tracking-widest uppercase">
-                    © {new Date().getFullYear()} LexCounsel Law Offices. All Rights Reserved.
-                </p>
-                <div className="flex gap-10 text-[11px] font-bold tracking-widest uppercase text-white/30">
-                    <a href="#" className="hover:text-brand transition-colors underline-offset-4 hover:underline">Disclaimer</a>
-                    <a href="#" className="hover:text-brand transition-colors underline-offset-4 hover:underline">Privacy Policy</a>
-                    <a href="#" className="hover:text-brand transition-colors underline-offset-4 hover:underline">T&C</a>
+                {/* Bottom Bar */}
+                <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <p className="text-white/30 text-[11px] font-bold tracking-widest uppercase">
+                        © {new Date().getFullYear()} LexCounsel Law Offices. All Rights Reserved.
+                    </p>
+                    <div className="flex gap-10 text-[11px] font-bold tracking-widest uppercase text-white/30">
+                        <a href="#" className="hover:text-brand transition-colors underline-offset-4 hover:underline">Disclaimer</a>
+                        <a href="#" className="hover:text-brand transition-colors underline-offset-4 hover:underline">Privacy Policy</a>
+                        <a href="#" className="hover:text-brand transition-colors underline-offset-4 hover:underline">T&C</a>
+                    </div>
                 </div>
             </div>
-        </div>
         </footer>
     )
 }

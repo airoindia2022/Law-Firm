@@ -9,7 +9,7 @@ const Contact = () => {
         event.preventDefault();
         setResult("Sending....");
         const formData = new FormData(event.target);
-        formData.append("access_key", "0399f4f3-e72e-4690-9d27-84afbf032987");
+        formData.append("access_key", "aada99dc-987c-402c-baac-baf21cef5e62");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -84,7 +84,7 @@ const Contact = () => {
                                 TRANSMIT INQUIRY <Send className="h-4 w-4" />
                             </button>
                             {result && (
-                                <motion.p 
+                                <motion.p
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     className={`text-center text-sm font-bold tracking-widest uppercase ${result.includes('Error') ? 'text-red-500' : 'text-brand'}`}
