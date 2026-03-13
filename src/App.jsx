@@ -11,8 +11,6 @@ import PracticeArea from './pages/PracticeArea'
 import Newsletters from './pages/Newsletters'
 import Awards from './pages/Awards'
 import Contact from './pages/Contact'
-import PartnerDetail from './pages/PartnerDetail'
-
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -47,7 +45,6 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/team" element={<Team />} />
-                    <Route path="/team/:slug" element={<PartnerDetail />} />
                     <Route path="/practice-areas" element={<PracticeAreas />} />
                     <Route path="/practice-areas/:slug" element={<PracticeArea />} />
                     <Route path="/newsletters" element={<Newsletters />} />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown, Search, ArrowRight, Shield } from 'lucide-react'
+import { Menu, X, ChevronDown, ArrowRight, Shield } from 'lucide-react'
 import { MENU_ITEMS } from '../data'
 import logo from '../asserts/logo.png'
 import lady from '../asserts/lady.avif'
@@ -176,9 +176,6 @@ const Navbar = () => {
 
                         {/* Desktop Actions — visible at lg+ */}
                         <div className="hidden lg:flex items-center gap-4 xl:gap-6">
-                            <button className={`p-2 transition-colors duration-500 ${isHome && !scrolled ? 'text-white/70 hover:text-white' : 'text-slate-400 hover:text-brand'}`}>
-                                <Search className="w-4 h-4 xl:w-5 xl:h-5" />
-                            </button>
                             <Link
                                 to="/contact"
                                 className={`px-5 xl:px-8 py-3 xl:py-3.5 rounded-full text-[10px] font-bold uppercase tracking-[0.15em] xl:tracking-[0.2em] transition-all duration-500 shadow-lg hover:shadow-brand/20 active:scale-95 whitespace-nowrap ${isHome && !scrolled
@@ -192,9 +189,7 @@ const Navbar = () => {
 
                         {/* Mobile / Tablet Toggle — visible below lg */}
                         <div className="lg:hidden flex items-center gap-3">
-                            <button className={`p-2 transition-colors duration-300 ${isHome && !scrolled ? 'text-white/70 hover:text-white' : 'text-slate-400 hover:text-brand'}`}>
-                                <Search className="w-4 h-4" />
-                            </button>
+
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 aria-label="Toggle menu"

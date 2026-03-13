@@ -29,7 +29,7 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <Link to={`/team/${member.slug}`} className="block relative">
+            <div className="block relative">
                 <div className={`relative overflow-hidden transition-all duration-700 ${isLarge ? 'aspect-[4/5] rounded-[3rem]' : 'aspect-[3/4] rounded-[2rem]'} bg-neutral-100 border border-neutral-200/50 shadow-sm group-hover:shadow-2xl group-hover:border-brand/20`}>
 
                     {/* Image Layer */}
@@ -75,7 +75,7 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
                         <Plus className="w-4 h-4 text-white" />
                     </div>
                 </div>
-            </Link>
+            </div>
         </motion.div>
     )
 }
