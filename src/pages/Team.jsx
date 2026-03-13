@@ -10,14 +10,7 @@ import { TEAM_MEMBERS } from '../data'
 
 // Helper to get image URL with fallback logic
 const getMemberImage = (slug) => {
-    const base = 'https://lexcounsel.in/wp-content/uploads/2021/04/'
-    const overrides = {
-        'dimpy-mohanty': 'dimpy-bio-img.png',
-        'seema-jhingan': 'seema-bio-img.png',
-        'alishan-naqvee': 'alishan-bio-img.png',
-    }
-    if (overrides[slug]) return base + overrides[slug]
-    return `${base}${slug}-bio-img.png`
+    return new URL(`../asserts/${slug}.jpeg`, import.meta.url).href;
 }
 
 const TeamMemberCard = ({ member, index, isLarge = false }) => {
@@ -42,7 +35,7 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
                         <img
                             src={!imageError ? getMemberImage(member.slug) : 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800'}
                             alt={member.name}
-                            className={`w-full h-full object-cover transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] ${!imageError ? 'grayscale group-hover:grayscale-0' : 'opacity-40'} group-hover:scale-105`}
+                            className={`w-full h-full object-cover transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] ${!imageError ? 'group-hover:grayscale-0' : 'opacity-40'} group-hover:scale-105`}
                             onError={() => setImageError(true)}
                         />
                     </div>
@@ -70,22 +63,8 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
                         <div className="overflow-hidden h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
                             <div className="w-8 h-[1px] bg-brand/50 mb-4"></div>
                             <p className="text-white/60 text-xs leading-relaxed line-clamp-2 md:line-clamp-3 italic font-light mb-6">
-                                {member.bio?.split('.')[0]}.
+                                {member.addres}.
                             </p>
-
-                            <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                                <span className="text-[9px] font-bold uppercase tracking-widest text-white flex items-center gap-2">
-                                    Full Profile <ArrowUpRight className="w-3 h-3 text-brand" />
-                                </span>
-                                <div className="flex gap-2">
-                                    <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand transition-colors">
-                                        <Linkedin className="w-3 h-3 text-white" />
-                                    </div>
-                                    <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand transition-colors">
-                                        <Mail className="w-3 h-3 text-white" />
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -101,11 +80,6 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
 
 const CategoryTitle = ({ title, tagline, description, center = false }) => (
     <div className={`max-w-3xl mb-16 md:mb-24 ${center ? 'mx-auto text-center' : ''}`}>
-        <div className={`flex items-center gap-4 mb-6 ${center ? 'justify-center' : ''}`}>
-            <div className="h-[1px] w-8 bg-brand"></div>
-            <span className="text-brand font-bold text-[10px] tracking-[0.4em] uppercase">{tagline}</span>
-            {center && <div className="h-[1px] w-8 bg-brand"></div>}
-        </div>
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-text-main mb-8 leading-tight">
             {title}
         </h2>
@@ -195,8 +169,8 @@ const Team = () => {
             </header>
 
             {/* 2. STAT STRIP */}
-            <section className="relative z-20 -mt-20 px-6">
-                <div className="max-w-7xl mx-auto bg-white shadow-2xl rounded-[3rem] p-12 lg:p-16 border border-neutral-100 flex flex-wrap items-center justify-around gap-12">
+            <section className="relative z-20 -mt-10 md:-mt-20 px-4 md:px-6">
+                <div className="max-w-7xl mx-auto bg-white shadow-2xl rounded-3xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 border border-neutral-100 grid grid-cols-2 md:flex md:flex-wrap items-center justify-around gap-8 md:gap-12">
                     {[
                         { label: "Founded", val: "1994", detail: "Global Excellence" },
                         { label: "Collective Expertise", val: "500+", detail: "Professional Years" },
@@ -204,110 +178,41 @@ const Team = () => {
                         { label: "Capabilities", val: "PAN-INDIA", detail: "Full Service" }
                     ].map((stat, i) => (
                         <div key={i} className="text-center group">
-                            <p className="text-[10px] font-bold text-brand uppercase tracking-[0.3em] mb-2">{stat.label}</p>
-                            <p className="text-4xl font-serif font-bold text-text-main mb-1 group-hover:text-brand transition-colors">{stat.val}</p>
-                            <p className="text-[10px] text-text-muted italic">{stat.detail}</p>
+                            <p className="text-[9px] md:text-[10px] font-bold text-brand uppercase tracking-[0.2em] md:tracking-[0.3em] mb-2">{stat.label}</p>
+                            <p className="text-3xl md:text-4xl font-serif font-bold text-text-main mb-1 group-hover:text-brand transition-colors">{stat.val}</p>
+                            <p className="text-[9px] md:text-[10px] text-text-muted italic">{stat.detail}</p>
                         </div>
                     ))}
                 </div>
             </section>
-
-            {/* 3. STICKY FILTER & SEARCH */}
-            <div className="sticky top-[72px] z-[90] bg-white/80 backdrop-blur-2xl border-b border-neutral-100 py-6 mt-16">
-                <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-                        {['All', 'Partner', 'Counsel'].map(filter => (
-                            <button
-                                key={filter}
-                                onClick={() => setActiveFilter(filter)}
-                                className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all relative py-2 ${activeFilter === filter ? 'text-brand' : 'text-text-muted hover:text-text-main'}`}
-                            >
-                                {filter === 'All' ? 'Every Expert' : filter + 's'}
-                                {activeFilter === filter && (
-                                    <motion.div layoutId="teamUnderline" className="absolute -bottom-1 left-0 right-0 h-[2px] bg-brand" />
-                                )}
-                            </button>
-                        ))}
-                    </div>
-
-                    <div className="relative w-full md:w-72 group">
-                        <Search className="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted group-hover:text-brand transition-colors" />
-                        <input
-                            type="text"
-                            placeholder="Search by Name or Practice..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full bg-transparent border-b border-neutral-200 focus:border-brand px-8 py-2 text-xs font-medium focus:outline-none transition-all placeholder:text-neutral-400"
-                        />
-                    </div>
-                </div>
-            </div>
-
             {/* 4. TEAM CONTENT */}
             <main className="py-24 md:py-32">
                 <div className="max-w-7xl mx-auto px-6">
                     <AnimatePresence mode="wait">
-                        {filteredMembers.length === 0 ? (
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                className="flex flex-col items-center justify-center py-32 text-center"
-                            >
-                                <div className="w-20 h-20 rounded-full bg-neutral-50 flex items-center justify-center mb-6">
-                                    <Users className="w-8 h-8 text-neutral-200" />
-                                </div>
-                                <h3 className="text-2xl font-serif font-bold text-text-muted mb-4">No results found.</h3>
-                                <p className="text-neutral-400 mb-8 max-w-md">We couldn't find any team members matching your specific criteria. Please try a different search or filter.</p>
-                                <button
-                                    onClick={() => { setSearchQuery(''); setActiveFilter('All'); }}
-                                    className="px-8 py-3 bg-brand text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full hover:shadow-xl transition-all"
-                                >
-                                    Reset Filters
-                                </button>
-                            </motion.div>
-                        ) : (
-                            <motion.div
-                                key={`${activeFilter}-${searchQuery}`}
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                className="space-y-32"
-                            >
+                        <motion.div
+                            key={`${activeFilter}-${searchQuery}`}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="space-y-32"
+                        >
 
-                                {/* Partners */}
-                                {equityPartners.length > 0 && (
-                                    <section>
-                                        <CategoryTitle
-                                            title="Partners"
-                                            tagline="Operational Excellence"
-                                            description="Navigaling complex global transactions and regulatory landscapes with unmatched sector-specific intelligence."
-                                        />
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
-                                            {equityPartners.map((member, idx) => (
-                                                <TeamMemberCard key={member.slug} member={member} index={idx} />
-                                            ))}
-                                        </div>
-                                    </section>
-                                )}
 
-                                {/* Counsel */}
-                                {technicalCounsels.length > 0 && (
-                                    <section>
-                                        <CategoryTitle
-                                            title="Counsel"
-                                            tagline="Specialized Expertise"
-                                            description="Deep-domain specialists providing granular insights into Intellectual Property, Tax, and Specialized Litigation."
-                                        />
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
-                                            {technicalCounsels.map((member, idx) => (
-                                                <TeamMemberCard key={member.slug} member={member} index={idx} />
-                                            ))}
-                                        </div>
-                                    </section>
-                                )}
-                            </motion.div>
-                        )}
+                            {/* Counsel */}
+                            {technicalCounsels.length > 0 && (
+                                <section>
+                                    <CategoryTitle
+                                        title="Counsel"
+                                        description="Deep-domain specialists providing granular insights into Intellectual Property, Tax, and Specialized Litigation."
+                                    />
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+                                        {technicalCounsels.map((member, idx) => (
+                                            <TeamMemberCard key={member.slug} member={member} index={idx} />
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+                        </motion.div>
                     </AnimatePresence>
                 </div>
             </main>

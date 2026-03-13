@@ -66,26 +66,6 @@ const Newsletters = () => {
             {/* Content & Search Section */}
             <section className="pb-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Search Bar */}
-                    <div className="mb-16 relative">
-                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-8 border-b border-border">
-                            <div className="relative group max-w-md w-full">
-                                <Search className="absolute left-0 top-1/2 -translate-y-1/2 h-5 w-5 text-text-light group-focus-within:text-brand transition-colors" />
-                                <input
-                                    type="text"
-                                    placeholder="Search newsletters..."
-                                    className="w-full bg-transparent border-none pl-8 pr-4 py-2 text-primary focus:ring-0 placeholder:text-text-light/50 text-lg font-light"
-                                    value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}
-                                />
-                            </div>
-                            <div className="flex gap-4 text-xs font-bold uppercase tracking-widest text-text-light">
-                                <span className="text-brand">Latest First</span>
-                                <span className="opacity-20">|</span>
-                                <span className="hover:text-brand cursor-pointer transition-colors">Archive</span>
-                            </div>
-                        </div>
-                    </div>
 
                     {/* Grid */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-20">

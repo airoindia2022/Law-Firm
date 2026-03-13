@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../asserts/logo.png'
 import { Linkedin, Twitter, Facebook, MapPin, Phone, Mail, ArrowRight } from 'lucide-react'
 
 const Footer = () => {
@@ -40,7 +41,7 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className="lg:col-span-4 flex flex-col items-start">
                         <Link to="/" className="mb-10 bg-white p-3 rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.1)] group overflow-hidden relative">
-                            <img className="h-10 w-auto relative z-10" src="https://lexcounsel.in/wp-content/uploads/2021/06/unnamed.png" alt="LexCounsel" />
+                            <img className="h-10 w-auto relative z-10" src={logo} alt="Integrity Legal Center" />
                             <div className="absolute inset-0 bg-brand/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                         </Link>
                         <p className="text-white/60 text-lg leading-relaxed mb-10 font-light italic max-w-sm">
@@ -92,19 +93,21 @@ const Footer = () => {
                                     <MapPin className="w-5 h-5 text-brand" />
                                 </div>
                                 <div className="text-white/50 leading-relaxed text-sm">
-                                    <p className="text-white font-bold mb-1">New Delhi (HQ)</p>
-                                    <p>C-10, Gulmohar Park,</p>
-                                    <p>New Delhi 110049, India</p>
+                                    <p className="text-white font-bold mb-1">Lucknow (HQ)</p>
+                                    <p>23/B, new friends colony behind DPS school,</p>
+                                    <p>Lucknow, Uttar Pradesh, India</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 group">
-                                <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-brand/20 transition-colors">
-                                    <Phone className="w-5 h-5 text-brand" />
-                                </div>
-                                <div className="text-white/50 font-medium text-sm">
-                                    <p className="text-white font-bold mb-1">Inquiry</p>
-                                    <p>+91 11 4166 2861</p>
-                                </div>
+                                <a className='flex items-center gap-4 group' href="tel:+917668392730">
+                                    <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-brand/20 transition-colors">
+                                        <Phone className="w-5 h-5 text-brand" />
+                                    </div>
+                                    <div className="text-white/50 font-medium text-sm">
+                                        <p className="text-white font-bold mb-1">Inquiry</p>
+                                        <p>+91 7668392730</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -132,13 +135,8 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
                     <p className="text-white/30 text-[11px] font-bold tracking-widest uppercase">
-                        © {new Date().getFullYear()} LexCounsel Law Offices. All Rights Reserved.
+                        © {new Date().getFullYear()} <a className="hover:text-brand transition-colors underline-offset-4 hover:underline" href="https://airo-india.vercel.app/">AIRO India</a>. All Rights Reserved.
                     </p>
-                    <div className="flex gap-10 text-[11px] font-bold tracking-widest uppercase text-white/30">
-                        <a href="#" className="hover:text-brand transition-colors underline-offset-4 hover:underline">Disclaimer</a>
-                        <a href="#" className="hover:text-brand transition-colors underline-offset-4 hover:underline">Privacy Policy</a>
-                        <a href="#" className="hover:text-brand transition-colors underline-offset-4 hover:underline">T&C</a>
-                    </div>
                 </div>
             </div>
         </footer>

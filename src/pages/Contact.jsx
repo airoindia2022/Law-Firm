@@ -105,21 +105,10 @@ const Contact = () => {
                         <div className="space-y-6">
                             {[
                                 {
-                                    city: 'Delhi | National HQ',
-                                    address: 'B-4/232, Safdarjung Enclave, New Delhi - 110029, India',
-                                    phone: '+91 11 4166 2861',
-                                    email: 'info@lexcounsel.in'
-                                },
-                                {
-                                    city: 'Odisha | Regional Hub',
-                                    address: 'D-36, Defence (AWHO) Colony, Niladri Vihar, Bhubaneswar - 751021',
-                                    phone: '+91 77354 14855',
-                                    email: 'odisha@lexcounsel.in'
-                                },
-                                {
-                                    city: 'Strategic Jurisdictions',
-                                    locations: ['Chandigarh', 'Kolkata', 'Prayagraj', 'Ahmedabad'],
-                                    email: 'info@lexcounsel.in'
+                                    city: 'Lucknow HQ',
+                                    address: '23/B, new friends colony behind DPS school , Jankipuram Extension , Lucknow up',
+                                    phone: '+91 7668392730',
+                                    email: 'integritylegalcentre@gmail.com'
                                 }
                             ].map((office, idx) => (
                                 <motion.div

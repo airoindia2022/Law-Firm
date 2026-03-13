@@ -68,7 +68,7 @@ const PracticeAreas = () => {
                             </h1>
 
                             <p className="text-lg text-text-muted leading-relaxed max-w-xl">
-                                LexCounsel provides specialized legal intelligence across a broad spectrum of practice areas, delivering strategic solutions tailored to the world's most innovative sectors.
+                                Integrity Legal Centre provides specialized legal intelligence across a broad spectrum of practice areas, delivering strategic solutions tailored to the world's most innovative sectors.
                             </p>
                         </div>
 

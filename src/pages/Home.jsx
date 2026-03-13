@@ -2,19 +2,24 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Briefcase, CheckCircle, BookOpen, ArrowRight, Award, Shield, Globe, ChevronLeft, ChevronRight } from 'lucide-react'
+import hero1 from '../asserts/hero1.avif'
+import hero2 from '../asserts/hero2.jpg'
+import hero3 from '../asserts/hero3.avif'
+import hero4 from '../asserts/hero4.avif'
+import lady from '../asserts/lady.avif'
 
 const heroSlides = [
     {
-        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920",
+        image: hero1,
     },
     {
-        image: "https://images.unsplash.com/photo-1505664177264-bba15037d0c7?auto=format&fit=crop&q=80&w=1920",
+        image: hero2,
     },
     {
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920",
+        image: hero3,
     },
     {
-        image: "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&q=80&w=1920",
+        image: hero4,
     }
 ];
 
@@ -130,14 +135,14 @@ const AboutSection = () => (
                 >
                     <span className="text-brand font-bold text-xs tracking-[0.3em] uppercase mb-4 block">About the Firm</span>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-main mb-8 leading-tight">
-                        LexCounsel is recognized among the most <span className="italic text-brand">trusted Law firms in India</span>
+                        Integrity Legal Centre is recognized among the most <span className="italic text-brand">trusted Law firms in India</span>
                     </h2>
                     <div className="space-y-6 text-lg text-text-muted leading-relaxed">
                         <p>
-                            LexCounsel is an award-winning law firm in India, having offices at New Delhi NCR, Bhubaneswar, Chandigarh, Kolkata, Allahabad and associate offices across India.
+                            Integrity Legal Centre is an award-winning law firm in India, having offices at New Delhi NCR, Bhubaneswar, Chandigarh, Kolkata, Allahabad and associate offices across India.
                         </p>
                         <p>
-                            We provide comprehensive legal services and solutions to a broad spectrum of domestic and foreign clients. LexCounsel is a top law firm in Delhi awarded across its practice areas, recognizing our members among the best business and litigation lawyers.
+                            We provide comprehensive legal services and solutions to a broad spectrum of domestic and foreign clients. Integrity Legal Centre is a top law firm in Delhi awarded across its practice areas, recognizing our members among the best business and litigation lawyers.
                         </p>
                     </div>
                     <div className="flex gap-6 mt-10">
@@ -282,7 +287,7 @@ const TestimonialsSection = () => (
                     delay={0.2}
                 />
                 <TestimonialCard
-                    quote="LexCounsel remains the go-to law firm for us in India. We continue to trust Alfred and team's extensive experience."
+                    quote="Integrity Legal Centre is a reliable and trustworthy law firm in India. We continue to trust their services."
                     author="Hollard India"
                     position="Liaison Office"
                     delay={0.3}

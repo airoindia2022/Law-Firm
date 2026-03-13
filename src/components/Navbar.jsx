@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown, Search, ArrowRight, Shield } from 'lucide-react'
 import { MENU_ITEMS } from '../data'
+import logo from '../asserts/logo.png'
+import lady from '../asserts/lady.avif'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -117,7 +119,7 @@ const Navbar = () => {
                 {/* Right Side: Featured Content/CTA */}
                 <div className="w-1/5 relative overflow-hidden group/cta">
                     <img
-                        src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80"
+                        src={lady}
                         alt="Legal Expertise"
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover/cta:scale-110"
                     />
@@ -147,8 +149,8 @@ const Navbar = () => {
                                 <div className="relative overflow-hidden bg-white rounded-lg p-1.5 lg:p-2 shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-0.5">
                                     <img
                                         className="h-8 lg:h-10 w-auto"
-                                        src="https://lexcounsel.in/wp-content/uploads/2021/06/unnamed.png"
-                                        alt="LexCounsel"
+                                        src={logo}
+                                        alt="Integrity Legal Center"
                                     />
                                     <div className="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 </div>
@@ -235,12 +237,12 @@ const Navbar = () => {
                                 <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
                                     <div className="w-8 h-8 rounded-lg bg-brand p-1.5 flex-shrink-0">
                                         <img
-                                            src="https://lexcounsel.in/wp-content/uploads/2021/06/unnamed.png"
-                                            alt="LexCounsel"
+                                            src={logo}
+                                            alt="Integrity Legal Center"
                                             className="w-full h-full object-contain brightness-0 invert"
                                         />
                                     </div>
-                                    <span className="font-bold text-slate-900 tracking-widest text-sm">LEXCOUNSEL</span>
+                                    <span className="font-bold text-slate-900 tracking-widest text-sm">Integrity Legal Center</span>
                                 </Link>
                                 <button
                                     onClick={() => setIsOpen(false)}

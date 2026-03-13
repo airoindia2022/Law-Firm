@@ -26,7 +26,7 @@ const PartnerDetail = () => {
     if (!member.name) {
         return (
             <div className="h-screen flex flex-col items-center justify-center bg-background">
-                <motion.h1 
+                <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="text-4xl font-display font-bold text-deep-midnight mb-8 tracking-tighter"
@@ -54,10 +54,10 @@ const PartnerDetail = () => {
                         </div>
                         <span className="opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0 hidden sm:inline">Our Team</span>
                     </Link>
-                    
+
                     <div className="flex items-center gap-6">
                         <div className="hidden md:flex items-center gap-4 border-r border-black/10 pr-6">
-                            <a href={`mailto:${member.email || 'info@lexcounsel.in'}`} className="text-text-muted hover:text-secondary transition-colors">
+                            <a href={`mailto:${member.email || 'integritylegalcentre@gmail.com'}`} className="text-text-muted hover:text-secondary transition-colors">
                                 <Mail className="w-4 h-4" />
                             </a>
                             <a href="#" className="text-text-muted hover:text-secondary transition-colors">
@@ -108,16 +108,16 @@ const PartnerDetail = () => {
                                 className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-edge bg-white"
                             >
                                 <img
-                                    src={!imageError ? `https://lexcounsel.in/wp-content/uploads/2021/04/${slug}-bio-img.png` : 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'}
+                                    src={!imageError ? new URL(`../asserts/${slug}.jpeg`, import.meta.url).href : 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'}
                                     alt={member.name}
                                     className="w-full h-full object-cover transition-all duration-1000"
                                     onError={() => setImageError(true)}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-deep-midnight/20 via-transparent to-transparent"></div>
                             </motion.div>
-                            
+
                             {/* Floating Stats */}
-                            <motion.div 
+                            <motion.div
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.6 }}
@@ -154,7 +154,7 @@ const PartnerDetail = () => {
             <section className="py-24 lg:py-32">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
-                        
+
                         {/* Left: Biography */}
                         <div className="lg:col-span-7 space-y-16">
                             <div>
@@ -174,7 +174,7 @@ const PartnerDetail = () => {
                                     <h3 className="text-3xl font-display font-bold text-deep-midnight mb-10">Notable Career Milestones</h3>
                                     <div className="space-y-6">
                                         {member.experience.map((exp, i) => (
-                                            <motion.div 
+                                            <motion.div
                                                 key={i}
                                                 whileHover={{ x: 10 }}
                                                 className="flex gap-6 p-6 rounded-2xl bg-white border border-black/5 hover:border-secondary/20 transition-all"
@@ -269,7 +269,7 @@ const PartnerDetail = () => {
                         Navigate complex legal landscapes with <span className="text-secondary italic">precision and depth.</span>
                     </h2>
                     <p className="text-text-muted max-w-xl mx-auto mb-12 font-light">
-                        Consistent recognition as a “Leading Lawyer in India” underscores the depth of expertise and commitment to excellence that defines LexCounsel.
+                        Consistent recognition as a “Leading Lawyer in India” underscores the depth of expertise and commitment to excellence that defines Integrity Legal Centre.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <Link to="/contact" className="px-10 py-4 bg-deep-midnight text-white text-[10px] font-bold uppercase tracking-[0.3em] rounded-full hover:shadow-premium-btn transition-all">
