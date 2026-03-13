@@ -275,61 +275,20 @@ const TestimonialsSection = () => (
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <TestimonialCard
-                    quote="Seema Jhingan is a brilliant lawyer and understands the legality of the education system of India. She was able to understand and analyse my problems and give solutions instantly."
-                    author="Siddharth Singh"
-                    position="Director, The Emerald Heights International School"
+                    quote="ADV. Yazdani hassan is a brilliant lawyer and understands the legality of the education system of India. She was able to understand and analyse my problems and give solutions instantly."
+                    author="Tarannum khan"
                     delay={0.1}
                 />
                 <TestimonialCard
-                    quote="Tomomi Shimizu is all praise for the services provided and commends partner Dimpy Mohanty for their extraordinarily high skills and competence."
-                    author="Tomomi Shimizu"
-                    position="Senior Project Manager, Kamonohashi Project"
+                    quote="Ashish Mishra is all praise for the services provided and commends partner Dimpy Mohanty for their extraordinarily high skills and competence."
+                    author="Ashish Mishra"
                     delay={0.2}
                 />
                 <TestimonialCard
                     quote="Integrity Legal Centre is a reliable and trustworthy law firm in India. We continue to trust their services."
-                    author="Hollard India"
-                    position="Liaison Office"
+                    author="Fauzia Hasan Siddiqui"
                     delay={0.3}
                 />
-            </div>
-        </div>
-    </section>
-);
-
-const AwardsSection = () => (
-    <section className="py-24 bg-primary relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-                <span className="text-brand font-bold text-xs tracking-[0.3em] uppercase mb-4 block">Recognition</span>
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
-                    Awards & <span className="italic text-brand">Accolades</span>
-                </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {[
-                    "Distinguished Firm of the Year for IBC - CCAI Legal Excellence Awards 2021",
-                    "“Legal Advisory Services” award - 7th Edition India Legal Awards 2021",
-                    "‘Education’ - Indian Law Firm Awards (India Business Law Journal) 2021",
-                    "‘TMT Law Firm of the Year’ - BW Legal World-Global Legal Summit 2020",
-                    "‘Corporate & Commercial’ - Indian Law Firm Awards (IBLJ) 2020",
-                    "“Best Life Science & Healthcare Law Firm” - APAC Legal Awards 2020"
-                ].map((award, i) => (
-                    <motion.div
-                        key={i}
-                        initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.1 }}
-                        className="flex items-center gap-6 p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-colors group"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-brand/30 flex items-center justify-center flex-shrink-0 group-hover:bg-brand/10 transition-colors">
-                            <Award className="w-6 h-6 text-brand" />
-                        </div>
-                        <span className="text-white/80 font-serif text-lg">{award}</span>
-                    </motion.div>
-                ))}
             </div>
         </div>
     </section>
@@ -375,7 +334,6 @@ const Home = () => {
             <Hero />
             <AboutSection />
             <PracticeSection />
-            <AwardsSection />
             <TestimonialsSection />
             <AffiliationsSection />
         </div>

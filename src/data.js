@@ -179,32 +179,55 @@ export const MENU_ITEMS = [
         ]
     },
     { name: 'Newsletters', path: '/newsletters' },
-    { name: 'Awards', path: '/awards' },
     { name: 'Contact Us', path: '/contact' },
 ]
 
 export const TEAM_MEMBERS = [
     {
         slug: 'muksheed',
-        name: 'Adv Mukseed',
+        name: 'Advocate Mukseed',
         role: 'Counsel',
         addres: 'Delhi'
     },
     {
         slug: 'Awadhesh',
-        name: 'Adv Awadhesh Mishra',
+        name: 'Advocate Awadhesh Mishra',
+        role: 'Counsel',
+        addres: 'Delhi'
+    },
+    {
+        slug: 'yazdani',
+        name: 'Advocate Yazdani Hassan',
         role: 'Counsel',
         addres: 'Delhi'
     },
     {
         slug: 'Syed',
-        name: 'Adv Syed Rehan',
+        name: 'Advocate Syed Rehan',
         role: 'Counsel',
         addres: 'Delhi'
     },
     {
         slug: 'sheebu',
-        name: 'Adv Sheebu',
+        name: 'Advocate Sheebu',
+        role: 'Counsel',
+        addres: 'Delhi'
+    },
+    {
+        slug: 'Wahid',
+        name: 'Advocate Wahid',
+        role: 'Counsel',
+        addres: 'Delhi'
+    },
+    {
+        slug: 'Mateen',
+        name: 'Advocate Mateen Khan',
+        role: 'Counsel',
+        addres: 'Delhi'
+    },
+    {
+        slug: 'Vijay',
+        name: 'Advocate Vijay  Kishore Mishra',
         role: 'Counsel',
         addres: 'Delhi'
     },

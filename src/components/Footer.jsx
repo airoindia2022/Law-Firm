@@ -93,9 +93,9 @@ const Footer = () => {
                                     <MapPin className="w-5 h-5 text-brand" />
                                 </div>
                                 <div className="text-white/50 leading-relaxed text-sm">
-                                    <p className="text-white font-bold mb-1">Lucknow (HQ)</p>
-                                    <p>23/B, new friends colony behind DPS school,</p>
-                                    <p>Lucknow, Uttar Pradesh, India</p>
+                                    <p className="text-white font-bold mb-1">Delhi (HQ)</p>
+                                    <p> near tis hazari court adjacent to St. Stephen's Hospital</p>
+                                    <p>Delhi, India</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 group">

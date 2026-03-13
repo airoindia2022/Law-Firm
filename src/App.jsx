@@ -9,7 +9,6 @@ import Team from './pages/Team'
 import PracticeAreas from './pages/PracticeAreas'
 import PracticeArea from './pages/PracticeArea'
 import Newsletters from './pages/Newsletters'
-import Awards from './pages/Awards'
 import Contact from './pages/Contact'
 
 import Navbar from './components/Navbar'
@@ -48,8 +47,6 @@ const App = () => {
                     <Route path="/practice-areas" element={<PracticeAreas />} />
                     <Route path="/practice-areas/:slug" element={<PracticeArea />} />
                     <Route path="/newsletters" element={<Newsletters />} />
-                    <Route path="/awards" element={<Awards />} />
-
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
             </PageLayout>

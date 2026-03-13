@@ -64,7 +64,7 @@ const Contact = () => {
                         </p>
                     </motion.div>
                 </div>
-                
+
                 {/* Subtle bottom border gradient */}
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
             </section>
@@ -72,7 +72,7 @@ const Contact = () => {
             <section className="py-24 lg:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-16 lg:gap-24 relative z-20 -mt-10">
                 {/* Left Side: Form */}
                 <div className="flex-1">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -128,7 +128,7 @@ const Contact = () => {
                                     <textarea name="message" required rows="5" className="w-full bg-[#F8FAFC] border border-gray-200 rounded-xl pl-12 pr-6 py-4 text-sm text-[#0F172A] focus:ring-2 focus:ring-[#B8860B]/20 focus:border-[#B8860B] outline-none transition-all placeholder:text-gray-400 resize-none" placeholder="Provide strategic context..."></textarea>
                                 </div>
                             </div>
-                            
+
                             <div className="pt-2">
                                 <button disabled={isSubmitting} type="submit" className="w-full relative inline-flex items-center justify-center px-8 py-5 bg-[#0F172A] text-white text-[12px] font-bold uppercase tracking-[0.2em] rounded-xl overflow-hidden transition-all hover:bg-[#B8860B] hover:shadow-[0_10px_20px_rgba(184,134,11,0.2)] disabled:opacity-70 disabled:cursor-not-allowed group/btn">
                                     <span className="relative z-10 flex items-center gap-3">
@@ -142,13 +142,12 @@ const Contact = () => {
                                 <motion.div
                                     initial={{ opacity: 0, y: -10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    className={`p-4 rounded-xl text-center text-sm font-bold tracking-[0.1em] border ${
-                                        result.includes('Error') 
-                                            ? 'bg-red-50 text-red-600 border-red-100' 
-                                            : result === 'Sending....' 
-                                                ? 'bg-blue-50 text-blue-600 border-blue-100' 
-                                                : 'bg-green-50 text-[#B8860B] border-[#B8860B]/20'
-                                    }`}
+                                    className={`p-4 rounded-xl text-center text-sm font-bold tracking-[0.1em] border ${result.includes('Error')
+                                        ? 'bg-red-50 text-red-600 border-red-100'
+                                        : result === 'Sending....'
+                                            ? 'bg-blue-50 text-blue-600 border-blue-100'
+                                            : 'bg-green-50 text-[#B8860B] border-[#B8860B]/20'
+                                        }`}
                                 >
                                     {result}
                                 </motion.div>
@@ -159,7 +158,7 @@ const Contact = () => {
 
                 {/* Right Side: Contact Info */}
                 <div className="w-full lg:w-[420px] space-y-8 lg:mt-12">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -169,14 +168,20 @@ const Contact = () => {
                             Global Hubs
                             <div className="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent"></div>
                         </h3>
-                        
+
                         <div className="space-y-6">
                             {[
                                 {
-                                    city: 'Lucknow HQ',
-                                    address: '23/B, New Friends Colony, behind DPS School, Jankipuram Extension, Lucknow UP',
+                                    city: 'Delhi HQ',
+                                    address: ' near tis hazari court adjacent to St. Stephen\'s Hospital, Delhi, India',
                                     phone: '+91 7668392730',
-                                    email: 'integritylegalcentre@gmail.com'
+                                    email: 'integritylegalcentre@gmail.com',
+                                },
+                                {
+                                    city: 'Lucknow HQ',
+                                    address: '23/B, new friends colony behind DPS school , Jankipuram Extension , Lucknow up',
+                                    phone: '+91 7668392730',
+                                    email: 'advocateyhsiddiqui@gmail.com',
                                 }
                             ].map((office, idx) => (
                                 <div
@@ -187,7 +192,7 @@ const Contact = () => {
                                         <span className="w-1.5 h-1.5 rounded-full bg-[#B8860B]"></span>
                                         <h4 className="text-[12px] font-bold text-[#0F172A] uppercase tracking-[0.15em]">{office.city}</h4>
                                     </div>
-                                    
+
                                     <div className="space-y-6">
                                         {office.address && (
                                             <div className="flex gap-4 group/item items-start">
@@ -218,7 +223,7 @@ const Contact = () => {
                     </motion.div>
 
                     {/* Social Section */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
