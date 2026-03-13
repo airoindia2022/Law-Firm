@@ -83,11 +83,6 @@ const Awards = () => {
                             <h2 className="text-3xl md:text-4xl font-bold font-serif text-text-main mb-4">Honors & Accolades</h2>
                             <p className="text-text-muted">Explore the recognition we have received from the world's most prestigious legal institutions.</p>
                         </div>
-                        <div className="flex items-center gap-4 text-sm font-medium text-text-muted">
-                            <span>Filter by:</span>
-                            <button className="px-4 py-2 bg-white border border-border rounded-full text-brand shadow-sm">All Years</button>
-                            <button className="px-4 py-2 hover:text-brand transition-colors">Latest</button>
-                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
