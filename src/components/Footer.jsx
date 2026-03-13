@@ -77,9 +77,9 @@ const Footer = () => {
                                 <span className="w-0 h-0.5 bg-brand transition-all group-hover:w-4"></span>
                                 Practice Areas
                             </Link></li>
-                            <li><Link to="/awards" className="hover:text-brand transition-colors flex items-center group gap-2">
+                            <li><Link to="/newsletters" className="hover:text-brand transition-colors flex items-center group gap-2">
                                 <span className="w-0 h-0.5 bg-brand transition-all group-hover:w-4"></span>
-                                Awards & Recognition
+                                Newsletter
                             </Link></li>
                         </ul>
                     </div>
