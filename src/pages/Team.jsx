@@ -7,6 +7,8 @@ import {
     Quote, ExternalLink, Star, ArrowUpRight, Plus, Minus
 } from 'lucide-react'
 import { TEAM_MEMBERS } from '../data'
+import thero from '../asserts/thero.avif'
+import tim from '../asserts/tim.avif'
 
 // Helper to get image URL with fallback logic
 const getMemberImage = (slug) => {
@@ -128,7 +130,7 @@ const Team = () => {
                 {/* Visual Background */}
                 <motion.div style={{ y: heroY }} className="absolute inset-0 z-0">
                     <img
-                        src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000"
+                        src={thero}
                         alt="High-end Workspace"
                         className="w-full h-full object-cover opacity-20 grayscale"
                     />
@@ -248,7 +250,7 @@ const Team = () => {
                         <div className="relative">
                             <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-premium relative">
                                 <img
-                                    src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200"
+                                    src={tim}
                                     alt="Professionalism"
                                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                                 />

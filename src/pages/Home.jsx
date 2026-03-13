@@ -162,7 +162,7 @@ const AboutSection = () => (
                 >
                     <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-edge">
                         <img
-                            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200"
+                            src={lady}
                             alt="Law Office"
                             className="w-full h-[500px] object-cover"
                         />

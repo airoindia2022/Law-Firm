@@ -25,7 +25,7 @@ export const MENU_ITEMS = [
             {
                 name: 'Corporate & Commercial',
                 path: '/practice-areas/corporate-commercial',
-                image: { corporate },
+                image: corporate,
                 description: 'Recognized among the best corporate law firms in India, Integrity Legal Centre houses some of the finest corporate lawyers advising a diverse client base from Fortune 500 companies to startups with precision and speed.',
                 services: [
                     'Mergers, acquisitions, amalgamations, and buy-outs',
@@ -47,7 +47,7 @@ export const MENU_ITEMS = [
             {
                 name: 'Education',
                 path: '/practice-areas/education',
-                image: { education },
+                image: education,
                 description: 'Pioneering practice advising on schools, higher education, and vocational training, navigating the charitable/not-for-profit sector regulations.',
                 services: [
                     'Structuring educational service models (AICTE & UGC compliance)',
@@ -69,7 +69,7 @@ export const MENU_ITEMS = [
             {
                 name: 'Real Estate',
                 path: '/practice-areas/real-estate',
-                image: { realestate },
+                image: realestate,
                 description: 'Recognized among the finest real estate law firms, advising developers and financiers on all aspects of property transactions and RERA compliance.',
                 services: [
                     'Compliances, registrations and reporting under RERA',
@@ -91,73 +91,73 @@ export const MENU_ITEMS = [
             {
                 name: 'Intellectual Property',
                 path: '/practice-areas/intellectual-property',
-                image: { intellectualproperty },
+                image: intellectualproperty,
                 description: 'Protection and monetization of IP assets including trademarks, patents, and copyrights.'
             },
             {
                 name: 'Insurance',
                 path: '/practice-areas/insurance',
-                image: { insurance },
+                image: insurance,
                 description: 'Expertise in regulatory compliance, licensing, and insurance law products.'
             },
             {
                 name: 'Telecommunications, Satellite and IT',
                 path: '/practice-areas/telecommunications-satellite-and-it',
-                image: { telecommunication },
+                image: telecommunication,
                 description: 'Cutting-edge legal advice for the tech, telecom, and satellite sectors.'
             },
             {
                 name: 'Life Sciences & Healthcare',
                 path: '/practice-areas/life-sciences-healthcare',
-                image: { lifesciences },
+                image: lifesciences,
                 description: 'Specialized support for healthcare providers and pharmaceutical companies.'
             },
             {
                 name: 'Litigation & ADR',
                 path: '/practice-areas/dispute-resolution',
-                image: { dispute },
+                image: dispute,
                 description: 'Strategic representation in litigation, arbitration, and alternative dispute resolution.'
             },
             {
                 name: 'Labour and Employment',
                 path: '/practice-areas/labour-and-employment',
-                image: { labour },
+                image: labour,
                 description: 'Advisory on employment contracts, labor disputes, and workplace compliance.'
             },
             {
                 name: 'Media & Entertainment',
                 path: '/practice-areas/media-entertainment',
-                image: { media },
+                image: media,
                 description: 'Legal solutions for content producers, broadcasters, and artists.'
             },
             {
                 name: 'Banking & Finance',
                 path: '/practice-areas/banking-finance-and-capital-markets',
-                image: { banking },
+                image: banking,
                 description: 'Expertise in banking regulations, capital markets, and debt financing.'
             },
             {
                 name: 'Licensing & Franchising',
                 path: '/practice-areas/licensing-franchising-and-trading',
-                image: { licensing },
+                image: licensing,
                 description: 'Strategic advice on licensing models and franchise expansion.'
             },
             {
                 name: 'Outsourcing',
                 path: '/practice-areas/outsourcing',
-                image: { outsourcing },
+                image: outsourcing,
                 description: 'Legal support for IT and BPO outsourcing contracts and models.'
             },
             {
                 name: 'Infrastructure & Mining',
                 path: '/practice-areas/infrastructure-projects-energy-mining-transportation-water',
-                image: { infrastructure },
+                image: infrastructure,
                 description: 'Specialized advice on energy, mining, and large-scale infrastructure projects.'
             },
             {
                 name: 'Taxation',
                 path: '/practice-areas/taxation',
-                image: { taxation },
+                image: taxation,
                 description: 'Expertise in direct and indirect taxation, offering tax efficient structures for investments and operations in India.',
                 services: [
                     'Comparative analysis of tax efficient investment structures',
