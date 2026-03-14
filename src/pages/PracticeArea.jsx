@@ -100,33 +100,6 @@ const PracticeArea = () => {
                             </div>
                         </div>
 
-                        {area.notableRepresentations && area.notableRepresentations.length > 0 && (
-                            <div>
-                                <div className="flex items-center gap-6 mb-16">
-                                    <h2 className="text-3xl font-serif font-bold text-text-main whitespace-nowrap uppercase tracking-widest">Success <span className="italic gradient-text">Precedents</span></h2>
-                                    <div className="h-[1px] w-full bg-border"></div>
-                                </div>
-                                <div className="grid grid-cols-1 gap-6">
-                                    {area.notableRepresentations.map((rep, index) => (
-                                        <motion.div
-                                            key={index}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ delay: index * 0.1 }}
-                                            className="group p-8 card-light flex gap-8 items-center hover:border-brand/40"
-                                        >
-                                            <div className="h-14 w-14 bg-white border border-border rounded-xl flex items-center justify-center text-brand flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-colors shadow-sm">
-                                                <ArrowRight className="h-6 w-6" />
-                                            </div>
-                                            <p className="text-lg leading-relaxed text-text-muted italic group-hover:text-text-main transition-colors">
-                                                {rep}
-                                            </p>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
                     </div>
 
                     <div className="w-full lg:w-[400px] space-y-10">
