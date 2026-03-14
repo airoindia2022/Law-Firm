@@ -7,6 +7,10 @@ import hero2 from '../asserts/hero2.jpg'
 import hero3 from '../asserts/hero3.avif'
 import hero4 from '../asserts/hero4.avif'
 import lady from '../asserts/lady.avif'
+import aeaLogo from '../asserts/AEA-logo.png'
+import ilnLogo from '../asserts/ILN.jpg'
+import irgLogo from '../asserts/IRG-logo.png'
+import pmaLogo from '../asserts/PMA.jpg'
 
 const heroSlides = [
     {
@@ -275,7 +279,7 @@ const TestimonialsSection = () => (
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <TestimonialCard
-                    quote="ADV. Yazdani hassan is a brilliant lawyer and understands the legality of the education system of India. She was able to understand and analyse my problems and give solutions instantly."
+                    quote="ADV. Yazdani hassan is a brilliant lawyer and understands the legality of the education system of India. He was able to understand and analyse my problems and give solutions instantly."
                     author="Tarannum khan"
                     delay={0.1}
                 />
@@ -294,39 +298,55 @@ const TestimonialsSection = () => (
     </section>
 );
 
-const AffiliationsSection = () => (
-    <section className="py-24 bg-white border-t border-border overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-                <span className="text-brand font-bold text-xs tracking-[0.3em] uppercase mb-4 block">Global Network</span>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-main">
-                    Our <span className="italic text-brand">Affiliations</span>
-                </h2>
+const AffiliationsSection = () => {
+    const affiliations = [
+        { name: "AEA", logo: aeaLogo },
+        { name: "ILN", logo: ilnLogo },
+        { name: "IRG", logo: irgLogo },
+        { name: "PMA", logo: pmaLogo }
+    ];
+
+    const marqueeItems = [...affiliations, ...affiliations, ...affiliations];
+
+    return (
+        <section className="py-24 bg-white border-t border-border overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+                <div className="text-center">
+                    <span className="text-brand font-bold text-xs tracking-[0.3em] uppercase mb-4 block">Global Network</span>
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-main">
+                        Our <span className="italic text-brand">Affiliations</span>
+                    </h2>
+                </div>
             </div>
 
-            <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-12">
-                {[
-                    "Alliott Global Alliance",
-                    "International Lawyers Network (ILN)",
-                    "IR Global"
-                ].map((name, i) => (
-                    <motion.div
-                        key={name}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.1 }}
-                        className="group"
-                    >
-                        <span className="text-xs md:text-sm font-bold text-text-muted uppercase tracking-[0.25em] group-hover:text-brand transition-all duration-500 cursor-default block text-center border-b border-transparent group-hover:border-brand/30 pb-2">
-                            {name}
-                        </span>
-                    </motion.div>
-                ))}
+            <div className="relative flex overflow-hidden w-full group py-4 items-center">
+                <div className="absolute left-0 top-0 w-16 md:w-32 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+
+                <motion.div
+                    animate={{ x: ["0%", "-33.333333%"] }}
+                    transition={{
+                        repeat: Infinity,
+                        ease: "linear",
+                        duration: 20,
+                    }}
+                    className="flex items-center shrink-0 gap-16 md:gap-32 min-w-max pr-16 md:pr-32"
+                >
+                    {marqueeItems.map((item, i) => (
+                        <div key={i} className="flex-shrink-0 flex items-center justify-center w-32 h-16 md:w-48 md:h-24">
+                            <img
+                                src={item.logo}
+                                alt={`${item.name} Logo`}
+                                className="w-full h-full object-contain  transition-all duration-300"
+                            />
+                        </div>
+                    ))}
+                </motion.div>
+
+                <div className="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 const Home = () => {
     return (
