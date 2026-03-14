@@ -174,7 +174,6 @@ const Team = () => {
             <section className="relative z-20 -mt-10 md:-mt-20 px-4 md:px-6">
                 <div className="max-w-7xl mx-auto bg-white shadow-2xl rounded-3xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 border border-neutral-100 grid grid-cols-2 md:flex md:flex-wrap items-center justify-around gap-8 md:gap-12">
                     {[
-                        { label: "Founded", val: "1994", detail: "Global Excellence" },
                         { label: "Collective Expertise", val: "500+", detail: "Professional Years" },
                         { label: "Recognition", val: "Tier 1", detail: "Chambers Ranked" },
                         { label: "Capabilities", val: "PAN-INDIA", detail: "Full Service" }
