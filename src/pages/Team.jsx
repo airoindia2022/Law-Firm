@@ -49,16 +49,17 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
                     <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
                         {/* Role & Name */}
                         <div className="space-y-1 mb-4">
-                            <motion.span
-                                initial={false}
-                                animate={{ color: isHovered ? '#B6890C' : '#FFFFFF' }}
-                                className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-70"
-                            >
-                                {member.role}
-                            </motion.span>
+
                             <h3 className={`font-serif font-bold text-white transition-all duration-500 ${isLarge ? 'text-3xl md:text-4xl' : 'text-xl md:text-2xl'}`}>
                                 {member.name}
                             </h3>
+                            <motion.span
+                                initial={false}
+                                animate={{ color: isHovered ? '#B6890C' : '#FFFFFF' }}
+                                className="text-[15px] font-bold uppercase tracking-[0.3em]"
+                            >
+                                {member.role}
+                            </motion.span>
                         </div>
 
                         {/* Expandable Info */}
@@ -122,6 +123,7 @@ const Team = () => {
 
     const equityPartners = filteredMembers.filter(m => m.role === 'Partner')
     const technicalCounsels = filteredMembers.filter(m => m.role === 'Counsel')
+    const legalAdvisors = filteredMembers.filter(m => m.role === 'Legal Advisor')
 
     return (
         <div className="bg-white min-h-screen font-sans selection:bg-brand selection:text-white" ref={containerRef}>
@@ -198,6 +200,20 @@ const Team = () => {
                             className="space-y-32"
                         >
 
+                            {/* Legal Advisor */}
+                            {legalAdvisors.length > 0 && (
+                                <section>
+                                    <CategoryTitle
+                                        title="Legal Advisor"
+                                        description="Strategic advisors providing expert legal guidance and comprehensive representation."
+                                    />
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+                                        {legalAdvisors.map((member, idx) => (
+                                            <TeamMemberCard key={member.slug} member={member} index={idx} />
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
 
                             {/* Counsel */}
                             {technicalCounsels.length > 0 && (
@@ -213,6 +229,8 @@ const Team = () => {
                                     </div>
                                 </section>
                             )}
+
+
                         </motion.div>
                     </AnimatePresence>
                 </div>

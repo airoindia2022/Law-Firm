@@ -197,27 +197,27 @@ export const TEAM_MEMBERS = [
     },
     {
         slug: 'yazdani',
-        name: 'Advocate Yazdani Hassan',
-        role: 'Counsel',
+        name: 'Dr. Yazdani Hassan',
+        role: 'Legal Advisor',
         addres: 'Delhi'
     },
     {
         slug: 'Syed',
         name: 'Advocate Syed Rehan',
         role: 'Counsel',
-        addres: 'Delhi'
+        addres: 'Lucknow'
     },
     {
         slug: 'sheebu',
         name: 'Advocate Sheebu',
         role: 'Counsel',
-        addres: 'Delhi'
+        addres: 'Lucknow'
     },
     {
         slug: 'Wahid',
         name: 'Advocate Wahid',
         role: 'Counsel',
-        addres: 'Delhi'
+        addres: 'Lucknow'
     },
     {
         slug: 'Mateen',
@@ -228,6 +228,12 @@ export const TEAM_MEMBERS = [
     {
         slug: 'Vijay',
         name: 'Advocate Vijay  Kishore Mishra',
+        role: 'Counsel',
+        addres: 'Lucknow'
+    },
+    {
+        slug: 'ayan',
+        name: 'Advocate Ayan Khan',
         role: 'Counsel',
         addres: 'Delhi'
     },
