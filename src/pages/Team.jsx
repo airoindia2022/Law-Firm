@@ -282,7 +282,6 @@ const Team = () => {
                                         </div>
                                         <div>
                                             <p className="text-xs font-bold uppercase tracking-widest text-text-main">Legacy of Trust</p>
-                                            <p className="text-[10px] text-text-muted">Since 1994</p>
                                         </div>
                                     </div>
                                 </div>
