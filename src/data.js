@@ -237,6 +237,12 @@ export const TEAM_MEMBERS = [
         role: 'Counsel',
         addres: 'Delhi'
     },
+    {
+        slug: 'jamil',
+        name: 'Advocate Jamil Riyaz Ansari',
+        role: 'Counsel',
+        addres: 'Delhi'
+    },
 ];
 
 export const AWARDS = [
