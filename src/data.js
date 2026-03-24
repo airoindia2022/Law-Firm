@@ -208,6 +208,13 @@ export const TEAM_MEMBERS = [
         addres: 'Lucknow'
     },
     {
+
+        slug: 'saeed',
+        name: 'Advocate Mohammad Saeed',
+        role: 'Counsel',
+        addres: 'Lucknow'
+    },
+    {
         slug: 'sheebu',
         name: 'Advocate Sheebu',
         role: 'Counsel',
