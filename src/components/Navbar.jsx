@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown, ArrowRight, Shield } from 'lucide-react'
 import { MENU_ITEMS } from '../data'
-import logo from '../asserts/logo.png'
+import logo from '../asserts/logo.jpg'
 import lady from '../asserts/lady.avif'
 
 const Navbar = () => {
@@ -63,7 +63,7 @@ const Navbar = () => {
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[90vw] max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-50 border border-black/5 flex h-[480px]">
                 {/* Left Side: Specializations */}
                 <div className="w-1/4 bg-slate-50 p-6 border-r border-black/5">
-                    <h3 className="text-[10px] font-bold text-brand uppercase tracking-[0.3em] mb-6">Specializations</h3>
+                    <h3 className="text-[12px] font-bold text-brand uppercase tracking-[0.3em] mb-6">Specializations</h3>
                     <div className="space-y-1">
                         {Object.keys(practiceCategories).map((cat) => (
                             <button
@@ -71,7 +71,7 @@ const Navbar = () => {
                                 onMouseEnter={() => setActiveCategory(cat)}
                                 className={`w-full group/cat flex items-center justify-between p-2.5 rounded-xl transition-all ${activeCategory === cat ? 'bg-white shadow-sm text-brand' : 'text-slate-600 hover:bg-white/50'}`}
                             >
-                                <span className="text-[12px] font-bold">{cat}</span>
+                                <span className="text-[14px] font-bold">{cat}</span>
                                 <ArrowRight className={`w-3.5 h-3.5 transition-all ${activeCategory === cat ? 'text-brand translate-x-1' : 'text-slate-300 opacity-0 group-hover/cat:opacity-100'}`} />
                             </button>
                         ))}
@@ -81,7 +81,7 @@ const Navbar = () => {
                 {/* Middle: Grid of Filtered Practice Areas */}
                 <div className="flex-1 p-8 overflow-y-auto custom-scrollbar bg-white">
                     <div className="mb-5">
-                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                        <span className="text-[12px] font-bold text-slate-400 uppercase tracking-widest leading-none">
                             {activeCategory === 'All' ? 'All Practice Areas' : `Practice Areas in ${activeCategory}`}
                         </span>
                     </div>
@@ -101,11 +101,11 @@ const Navbar = () => {
                                         to={sub.path}
                                         className="group/sub flex flex-col gap-1 p-2.5 rounded-xl hover:bg-slate-50 transition-all border border-transparent hover:border-black/5"
                                     >
-                                        <span className="text-[13px] font-bold text-slate-800 group-hover/sub:text-brand transition-colors">
+                                        <span className="text-[15px] font-bold text-slate-800 group-hover/sub:text-brand transition-colors">
                                             {sub.name}
                                         </span>
                                         {sub.description && (
-                                            <p className="text-[11px] text-slate-500 line-clamp-2 leading-relaxed">
+                                            <p className="text-[13px] text-slate-500 line-clamp-2 leading-relaxed">
                                                 {sub.description}
                                             </p>
                                         )}
@@ -126,9 +126,9 @@ const Navbar = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-brand/90 to-transparent"></div>
                     <div className="absolute inset-0 p-6 flex flex-col justify-end">
                         <Shield className="w-7 h-7 text-white mb-3" />
-                        <h4 className="text-base font-serif font-bold text-white mb-2 leading-tight">Elite Legal Representation</h4>
-                        <p className="text-white/80 text-[10px] mb-4 font-medium">Trusted by Fortune 500 companies.</p>
-                        <Link to="/contact" className="inline-flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-widest hover:gap-4 transition-all">
+                        <h4 className="text-lg font-serif font-bold text-white mb-2 leading-tight">Elite Legal Representation</h4>
+                        <p className="text-white/80 text-[12px] mb-4 font-medium">Trusted by Fortune 500 companies.</p>
+                        <Link to="/contact" className="inline-flex items-center gap-2 text-white text-[12px] font-bold uppercase tracking-widest hover:gap-4 transition-all">
                             Consult <ArrowRight className="w-3.5 h-3.5" />
                         </Link>
                     </div>
@@ -148,7 +148,7 @@ const Navbar = () => {
                             <Link to="/" className="group flex items-center gap-3">
                                 <div className="relative overflow-hidden bg-white rounded-lg p-1.5 lg:p-2 shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-0.5">
                                     <img
-                                        className="h-8 lg:h-10 w-auto"
+                                        className="h-10 lg:h-14 w-auto"
                                         src={logo}
                                         alt="Integrity Legal Center"
                                     />
@@ -163,7 +163,7 @@ const Navbar = () => {
                                 <div key={item.name} className="relative group px-3 xl:px-4 py-2">
                                     <Link
                                         to={item.path}
-                                        className={`relative py-2 text-[11px] xl:text-[12px] font-bold uppercase tracking-[0.12em] xl:tracking-[0.15em] transition-all duration-300 ${linkClass} group-hover:text-brand`}
+                                        className={`relative py-2 text-[13px] xl:text-[14px] font-bold uppercase tracking-[0.12em] xl:tracking-[0.15em] transition-all duration-300 ${linkClass} group-hover:text-brand`}
                                     >
                                         {item.name}
                                         {item.submenu && <ChevronDown className="inline-block ml-1 h-3 w-3 opacity-50 group-hover:rotate-180 transition-transform" />}
@@ -178,7 +178,7 @@ const Navbar = () => {
                         <div className="hidden lg:flex items-center gap-4 xl:gap-6">
                             <Link
                                 to="/contact"
-                                className={`px-5 xl:px-8 py-3 xl:py-3.5 rounded-full text-[10px] font-bold uppercase tracking-[0.15em] xl:tracking-[0.2em] transition-all duration-500 shadow-lg hover:shadow-brand/20 active:scale-95 whitespace-nowrap ${isHome && !scrolled
+                                className={`px-5 xl:px-8 py-3 xl:py-3.5 rounded-full text-[12px] font-bold uppercase tracking-[0.15em] xl:tracking-[0.2em] transition-all duration-500 shadow-lg hover:shadow-brand/20 active:scale-95 whitespace-nowrap ${isHome && !scrolled
                                     ? 'bg-white text-slate-900 hover:bg-slate-50'
                                     : 'bg-brand text-white hover:bg-[#8B6508]'
                                     }`}
@@ -230,14 +230,14 @@ const Navbar = () => {
                             {/* Drawer Header */}
                             <div className="p-5 border-b border-slate-100 flex justify-between items-center flex-shrink-0">
                                 <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-lg bg-brand p-1.5 flex-shrink-0">
+                                    <div className="w-10 h-10 rounded-lg bg-brand p-1.5 flex-shrink-0">
                                         <img
                                             src={logo}
                                             alt="Integrity Legal Center"
                                             className="w-full h-full object-contain brightness-0 invert"
                                         />
                                     </div>
-                                    <span className="font-bold text-slate-900 tracking-widest text-sm">Integrity Legal Center</span>
+                                    <span className="font-bold text-slate-900 tracking-widest text-base">Integrity Legal Center</span>
                                 </Link>
                                 <button
                                     onClick={() => setIsOpen(false)}
@@ -295,7 +295,7 @@ const Navbar = () => {
                                                                     key={sub.name}
                                                                     to={sub.path}
                                                                     onClick={() => setIsOpen(false)}
-                                                                    className="flex items-center gap-3 py-2 px-3 rounded-lg text-sm font-medium text-slate-600 hover:text-brand hover:bg-slate-50 transition-all"
+                                                                    className="flex items-center gap-3 py-2 px-3 rounded-lg text-base font-medium text-slate-600 hover:text-brand hover:bg-slate-50 transition-all"
                                                                 >
                                                                     <div className="w-1.5 h-1.5 rounded-full bg-brand/40 flex-shrink-0"></div>
                                                                     {sub.name}
@@ -315,7 +315,7 @@ const Navbar = () => {
                                 <Link
                                     to="/contact"
                                     onClick={() => setIsOpen(false)}
-                                    className="flex items-center justify-center gap-3 w-full py-4 bg-brand text-white rounded-2xl text-sm font-bold uppercase tracking-widest shadow-lg shadow-brand/20 active:scale-[0.98] transition-all hover:bg-[#8B6508]"
+                                    className="flex items-center justify-center gap-3 w-full py-4 bg-brand text-white rounded-2xl text-base font-bold uppercase tracking-widest shadow-lg shadow-brand/20 active:scale-[0.98] transition-all hover:bg-[#8B6508]"
                                 >
                                     Consult Our Experts <ArrowRight className="w-4 h-4" />
                                 </Link>

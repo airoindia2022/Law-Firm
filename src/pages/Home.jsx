@@ -89,7 +89,7 @@ const Hero = () => {
             <div className="absolute bottom-12 left-0 w-full flex justify-center items-center gap-12 z-30">
                 <button
                     onClick={prevSlide}
-                    className="hidden md:flex text-white/50 hover:text-white transition-colors items-center gap-4 text-xs font-bold uppercase tracking-[0.2em] group"
+                    className="hidden md:flex text-white/50 hover:text-white transition-colors items-center gap-4 text-sm font-bold uppercase tracking-[0.2em] group"
                 >
                     <ChevronLeft className="w-5 h-5 group-hover:-translate-x-2 transition-transform" />
                     PREV
@@ -107,7 +107,7 @@ const Hero = () => {
 
                 <button
                     onClick={nextSlide}
-                    className="hidden md:flex text-white/50 hover:text-white transition-colors items-center gap-4 text-xs font-bold uppercase tracking-[0.2em] group"
+                    className="hidden md:flex text-white/50 hover:text-white transition-colors items-center gap-4 text-sm font-bold uppercase tracking-[0.2em] group"
                 >
                     NEXT
                     <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -137,11 +137,11 @@ const AboutSection = () => (
                     viewport={{ once: true }}
                     className="flex-1"
                 >
-                    <span className="text-brand font-bold text-xs tracking-[0.3em] uppercase mb-4 block">About the Firm</span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-main mb-8 leading-tight">
+                    <span className="text-brand font-bold text-sm tracking-[0.3em] uppercase mb-4 block">About the Firm</span>
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-text-main mb-8 leading-tight">
                         Integrity Legal Centre is recognized among the most <span className="italic text-brand">trusted Law firms in India</span>
                     </h2>
-                    <div className="space-y-6 text-lg text-text-muted leading-relaxed">
+                    <div className="space-y-6 text-xl text-text-muted leading-relaxed">
                         <p>
                             Integrity Legal Centre is an award-winning law firm in India, having offices at New Delhi NCR, Bhubaneswar, Chandigarh, Kolkata, Allahabad and associate offices across India.
                         </p>
@@ -153,7 +153,7 @@ const AboutSection = () => (
                         <Link to="/contact" className="premium-btn">
                             Contact Us
                         </Link>
-                        <Link to="/team" className="px-8 py-4 border border-brand text-brand font-bold text-[11px] uppercase tracking-[0.3em] hover:bg-brand hover:text-white transition-all duration-500">
+                        <Link to="/team" className="px-8 py-4 border border-brand text-brand font-bold text-[13px] uppercase tracking-[0.3em] hover:bg-brand hover:text-white transition-all duration-500">
                             Our Team
                         </Link>
                     </div>
@@ -216,8 +216,8 @@ const PracticeSection = () => {
         <section className="py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <span className="text-brand font-bold text-xs tracking-[0.3em] uppercase mb-4 block">Our Specializations</span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-main">
+                    <span className="text-brand font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Our Specializations</span>
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-text-main">
                         Comprehensive Legal <span className="italic text-brand">Solutions</span>
                     </h2>
                 </div>
@@ -227,7 +227,7 @@ const PracticeSection = () => {
                     ))}
                 </div>
                 <div className="mt-16 text-center">
-                    <Link to="/practice-areas" className="inline-flex items-center gap-4 text-brand font-bold uppercase tracking-widest text-xs hover:gap-6 transition-all group">
+                    <Link to="/practice-areas" className="inline-flex items-center gap-4 text-brand font-bold uppercase tracking-widest text-sm hover:gap-6 transition-all group">
                         Explore All Practice Areas <ArrowRight className="w-4 h-4" />
                     </Link>
                 </div>
@@ -250,13 +250,13 @@ const TestimonialCard = ({ quote, author, position, delay }) => (
                     <path d="M9.333 4.667C5.654 4.667 2.667 7.654 2.667 11.333v11.334c0 1.104.896 2 2 2h7.333c1.104 0 2-.896 2-2V13.333c0-1.104-.896-2-2-2h-5.333c0-2.209 1.791-4 4-4 .552 0 1-.448 1-1V5.667c0-.552-.448-1-1-1zm16.667 0c-3.679 0-6.667 2.987-6.667 6.666v11.334c0 1.104.896 2 2 2h7.333c1.104 0 2-.896 2-2V13.333c0-1.104-.896-2-2-2H23.333c0-2.209 1.791-4 4-4 .552 0 1-.448 1-1V5.667c0-.552-.448-1-1-1z" />
                 </svg>
             </div>
-            <p className="text-lg text-text-main font-serif italic mb-8 leading-relaxed">
+            <p className="text-xl text-text-main font-serif italic mb-8 leading-relaxed">
                 "{quote}"
             </p>
         </div>
         <div>
-            <div className="font-bold text-text-main text-sm uppercase tracking-wider">{author}</div>
-            <div className="text-text-muted text-xs mt-1">{position}</div>
+            <div className="font-bold text-text-main text-base uppercase tracking-wider">{author}</div>
+            <div className="text-text-muted text-sm mt-1">{position}</div>
         </div>
     </motion.div>
 );
@@ -312,8 +312,8 @@ const AffiliationsSection = () => {
         <section className="py-24 bg-white border-t border-border overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
                 <div className="text-center">
-                    <span className="text-brand font-bold text-xs tracking-[0.3em] uppercase mb-4 block">Global Network</span>
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-text-main">
+                    <span className="text-brand font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Global Network</span>
+                    <h2 className="text-3xl md:text-4xl font-display font-bold text-text-main">
                         Our <span className="italic text-brand">Affiliations</span>
                     </h2>
                 </div>

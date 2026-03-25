@@ -10,7 +10,7 @@ const PracticeArea = () => {
     const { slug } = useParams()
     const area = MENU_ITEMS[2].submenu?.find(sub => sub.path.includes(slug)) || {}
 
-    if (!area.name) return <div className="p-20 text-center font-bold font-serif uppercase tracking-widest text-brand bg-background h-screen flex items-center justify-center">Resource Not Found</div>
+    if (!area.name) return <div className="p-20 text-center font-bold font-display uppercase tracking-widest text-brand bg-background h-screen flex items-center justify-center">Resource Not Found</div>
 
     const services = area.services || [
         'Strategic Advisory',
@@ -41,7 +41,7 @@ const PracticeArea = () => {
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10">
-                    <div className="flex items-center gap-3 text-secondary text-[10px] font-bold uppercase tracking-widest mb-10">
+                    <div className="flex items-center gap-3 text-secondary text-[12px] font-bold uppercase tracking-widest mb-10">
                         <Link to="/" className="hover:text-brand transition-colors">Home</Link>
                         <span className="text-border">&gt;</span>
                         <Link to="/practice-areas" className="hover:text-brand transition-colors">Practice Areas</Link>
@@ -56,12 +56,12 @@ const PracticeArea = () => {
                         className="max-w-4xl"
                     >
                         <div className="inline-block px-4 py-2 bg-white rounded-full shadow-sm border border-border mb-8">
-                            <span className="text-secondary font-bold text-xs tracking-widest uppercase">Core Domain Expertise</span>
+                            <span className="text-secondary font-bold text-sm tracking-widest uppercase">Core Domain Expertise</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-serif font-bold text-text-main leading-tight mb-8">
+                        <h1 className="text-6xl md:text-8xl font-display font-bold text-text-main leading-tight mb-8">
                             {area.name}
                         </h1>
-                        <p className="text-xl text-text-muted leading-relaxed font-light italic max-w-2xl border-l-2 border-brand/20 pl-8">
+                        <p className="text-2xl text-text-muted leading-relaxed font-light italic max-w-2xl border-l-2 border-brand/20 pl-8">
                             "{area.description}"
                         </p>
                     </motion.div>
@@ -73,7 +73,7 @@ const PracticeArea = () => {
                     <div className="flex-1">
                         <div className="mb-24">
                             <div className="flex items-center gap-6 mb-16">
-                                <h2 className="text-3xl font-serif font-bold text-text-main whitespace-nowrap uppercase tracking-widest">Client <span className="italic gradient-text">Capabilities</span></h2>
+                                <h2 className="text-4xl font-display font-bold text-text-main whitespace-nowrap uppercase tracking-widest">Client <span className="italic gradient-text">Capabilities</span></h2>
                                 <div className="h-[1px] w-full bg-border"></div>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -90,10 +90,10 @@ const PracticeArea = () => {
                                             <CheckCircle className="h-5 w-5" />
                                         </div>
                                         <div>
-                                            <h4 className="text-lg font-bold text-text-main group-hover:text-brand transition-colors mb-2">
+                                            <h4 className="text-xl font-bold text-text-main group-hover:text-brand transition-colors mb-2">
                                                 {service}
                                             </h4>
-                                            <p className="text-sm text-text-muted leading-relaxed">Comprehensive legal strategy focusing on regulatory compliance and risk mitigation.</p>
+                                            <p className="text-base text-text-muted leading-relaxed">Comprehensive legal strategy focusing on regulatory compliance and risk mitigation.</p>
                                         </div>
                                     </motion.div>
                                 ))}
@@ -109,7 +109,7 @@ const PracticeArea = () => {
                                 {MENU_ITEMS[2].submenu?.filter(s => s.path && !s.path.includes(slug)).slice(0, 6).map(s => (
                                     <Link key={s.name} to={s.path} className="group block">
                                         <div className="flex items-center justify-between border-b border-border pb-4 hover:border-brand/40 transition-colors">
-                                            <span className="text-sm font-semibold text-text-muted group-hover:text-brand transition-colors">
+                                            <span className="text-base font-semibold text-text-muted group-hover:text-brand transition-colors">
                                                 {s.name}
                                             </span>
                                             <ArrowRight className="h-4 w-4 text-border group-hover:text-brand transition-colors" />
@@ -123,8 +123,8 @@ const PracticeArea = () => {
                         <div className="p-10 bg-white border border-border shadow-soft rounded-[2rem] relative overflow-hidden group text-center">
                             <div className="absolute inset-0 bg-brand/5"></div>
                             <div className="relative z-10">
-                                <h4 className="font-serif font-bold text-text-main mb-4 text-2xl italic">Strategic Council</h4>
-                                <p className="text-text-muted text-sm mb-8 leading-relaxed">Connect with our Lead Partners for bespoke legal transformation strategies.</p>
+                                <h4 className="font-display font-bold text-text-main mb-4 text-3xl italic">Strategic Council</h4>
+                                <p className="text-text-muted text-base mb-8 leading-relaxed">Connect with our Lead Partners for bespoke legal transformation strategies.</p>
                                 <Link to="/contact" className="btn-primary !w-full justify-center">Request Consultation</Link>
                             </div>
                         </div>

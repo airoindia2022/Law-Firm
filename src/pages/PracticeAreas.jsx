@@ -30,13 +30,13 @@ const PracticeAreaCard = ({ name, path, image, description, index }) => (
 
             <div className="p-6 h-1/3 flex flex-col justify-between -mt-6 bg-white rounded-t-[1.5rem] relative z-10 mx-2 shadow-[0_-4px_10px_rgba(0,0,0,0.02)]">
                 <div>
-                    <h3 className="text-xl font-bold font-serif text-text-main group-hover:text-brand transition-colors tracking-tight leading-tight mb-2">
+                    <h3 className="text-2xl font-bold font-display text-text-main group-hover:text-brand transition-colors tracking-tight leading-tight mb-2">
                         {name}
                     </h3>
-                    <p className="text-xs text-text-muted font-medium uppercase tracking-widest">Practice Domain</p>
+                    <p className="text-sm text-text-muted font-medium uppercase tracking-widest">Practice Domain</p>
                 </div>
 
-                <div className="flex items-center gap-2 text-sm font-semibold text-brand transition-all duration-300">
+                <div className="flex items-center gap-2 text-base font-semibold text-brand transition-all duration-300">
                     Discover Expertise <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                 </div>
             </div>
@@ -59,15 +59,15 @@ const PracticeAreas = () => {
                     >
                         <div className="max-w-3xl">
                             <div className="inline-block px-4 py-2 bg-white rounded-full shadow-sm border border-border mb-8">
-                                <span className="text-secondary font-bold text-xs tracking-widest uppercase">Specialized Advisory</span>
+                                <span className="text-secondary font-bold text-sm tracking-widest uppercase">Specialized Advisory</span>
                             </div>
 
-                            <h1 className="text-5xl md:text-7xl font-bold font-serif text-text-main leading-tight mb-8">
+                            <h1 className="text-6xl md:text-8xl font-bold font-display text-text-main leading-tight mb-8">
                                 Infinite <br />
                                 <span className="gradient-text italic">Expertise.</span>
                             </h1>
 
-                            <p className="text-lg text-text-muted leading-relaxed max-w-xl">
+                            <p className="text-xl text-text-muted leading-relaxed max-w-xl">
                                 Integrity Legal Centre provides specialized legal intelligence across a broad spectrum of practice areas, delivering strategic solutions tailored to the world's most innovative sectors.
                             </p>
                         </div>
@@ -75,7 +75,7 @@ const PracticeAreas = () => {
                         <div className="hidden lg:block pb-4">
                             <div className="flex flex-col items-center">
                                 <div className="h-24 w-[2px] bg-gradient-to-t from-brand to-transparent rounded-full"></div>
-                                <div className="mt-6 -rotate-90 origin-center text-[10px] font-bold text-text-muted uppercase tracking-widest whitespace-nowrap translate-y-8">Global Focus</div>
+                                <div className="mt-6 -rotate-90 origin-center text-[12px] font-bold text-text-muted uppercase tracking-widest whitespace-nowrap translate-y-8">Global Focus</div>
                             </div>
                         </div>
                     </motion.div>
@@ -92,10 +92,10 @@ const PracticeAreas = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
                         <div className="lg:col-span-1">
-                            <h2 className="text-4xl font-bold font-serif text-text-main tracking-tight leading-tight mb-6">
+                            <h2 className="text-5xl font-bold font-display text-text-main tracking-tight leading-tight mb-6">
                                 Why Strategic <br /><span className="gradient-text">Insight Matters.</span>
                             </h2>
-                            <p className="text-text-muted text-lg leading-relaxed">
+                            <p className="text-text-muted text-xl leading-relaxed">
                                 Beyond the letter of the law, we navigate the spirit of the industry.
                             </p>
                         </div>
@@ -110,8 +110,8 @@ const PracticeAreas = () => {
                                     <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-brand mb-6 shadow-sm group-hover:bg-brand group-hover:text-white transition-colors">
                                         <item.icon className="h-6 w-6" />
                                     </div>
-                                    <h4 className="font-bold text-text-main text-xl mb-3">{item.title}</h4>
-                                    <p className="text-text-muted leading-relaxed">{item.desc}</p>
+                                    <h4 className="font-bold text-text-main text-2xl mb-3">{item.title}</h4>
+                                    <p className="text-text-muted text-base leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
                         </div>

@@ -1,3 +1,7 @@
+html {
+    font-size: 18px;
+}
+
 :root {
     --brand-gold: #B8860B;
     --brand-gold-light: #D4AF37;
@@ -22,7 +26,7 @@
     h1,
     h2,
     h3 {
-        @apply font-serif font-bold tracking-tight text-[#0F172A] leading-[1.1];
+        @apply font-display font-bold tracking-tight text-[#0F172A] leading-[1.1];
     }
 
     p {
@@ -32,7 +36,7 @@
 
 @layer components {
     .premium-btn {
-        @apply relative inline-flex items-center justify-center px-10 py-4 bg-[#B8860B] text-white text-[11px] font-bold uppercase tracking-[0.3em] overflow-hidden transition-all duration-500 hover:bg-[#8B6508] shadow-premium-btn;
+        @apply relative inline-flex items-center justify-center px-10 py-4 bg-[#B8860B] text-white text-[13px] font-bold uppercase tracking-[0.3em] overflow-hidden transition-all duration-500 hover:bg-[#8B6508] shadow-premium-btn;
     }
 
     .premium-btn::after {

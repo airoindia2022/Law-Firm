@@ -56,7 +56,7 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
                             <motion.span
                                 initial={false}
                                 animate={{ color: isHovered ? '#B6890C' : '#FFFFFF' }}
-                                className="text-[15px] font-bold uppercase tracking-[0.3em]"
+                                className="text-[17px] font-bold uppercase tracking-[0.3em]"
                             >
                                 {member.role}
                             </motion.span>
@@ -65,7 +65,7 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
                         {/* Expandable Info */}
                         <div className="overflow-hidden h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
                             <div className="w-8 h-[1px] bg-brand/50 mb-4"></div>
-                            <p className="text-white/60 text-xs leading-relaxed line-clamp-2 md:line-clamp-3 italic font-light mb-6">
+                            <p className="text-white/60 text-sm leading-relaxed line-clamp-2 md:line-clamp-3 italic font-light mb-6">
                                 {member.addres}.
                             </p>
                         </div>
@@ -83,11 +83,11 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
 
 const CategoryTitle = ({ title, tagline, description, center = false }) => (
     <div className={`max-w-3xl mb-16 md:mb-24 ${center ? 'mx-auto text-center' : ''}`}>
-        <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-text-main mb-8 leading-tight">
+        <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-text-main mb-8 leading-tight">
             {title}
         </h2>
         {description && (
-            <p className="text-lg text-text-muted font-light leading-relaxed">
+            <p className="text-xl text-text-muted font-light leading-relaxed">
                 {description}
             </p>
         )}
@@ -147,14 +147,14 @@ const Team = () => {
                         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                         className="max-w-5xl mx-auto"
                     >
-                        <span className="inline-block text-brand font-bold text-[10px] tracking-[0.5em] uppercase mb-8">
+                        <span className="inline-block text-brand font-bold text-[12px] tracking-[0.5em] uppercase mb-8">
                             Empowering Global Ambitions
                         </span>
-                        <h1 className="text-6xl md:text-8xl lg:text-[140px] font-serif font-bold text-white leading-[0.85] tracking-tighter mb-12">
+                        <h1 className="text-7xl md:text-8xl lg:text-[160px] font-display font-bold text-white leading-[0.85] tracking-tighter mb-12">
                             The <span className="italic font-light text-brand">Architects</span> <br />
                             of Strategy.
                         </h1>
-                        <p className="text-xl md:text-2xl text-white/40 font-serif italic font-light max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-2xl md:text-3xl text-white/40 font-display italic font-light max-w-2xl mx-auto leading-relaxed">
                             "Innovation in thought, precision in execution. We are the partners to your global growth."
                         </p>
                     </motion.div>
@@ -181,9 +181,9 @@ const Team = () => {
                         { label: "Capabilities", val: "PAN-INDIA", detail: "Full Service" }
                     ].map((stat, i) => (
                         <div key={i} className="text-center group">
-                            <p className="text-[9px] md:text-[10px] font-bold text-brand uppercase tracking-[0.2em] md:tracking-[0.3em] mb-2">{stat.label}</p>
-                            <p className="text-3xl md:text-4xl font-serif font-bold text-text-main mb-1 group-hover:text-brand transition-colors">{stat.val}</p>
-                            <p className="text-[9px] md:text-[10px] text-text-muted italic">{stat.detail}</p>
+                            <p className="text-[11px] md:text-[12px] font-bold text-brand uppercase tracking-[0.12em] md:tracking-[0.14em] mb-2">{stat.label}</p>
+                            <p className="text-4xl md:text-5xl font-display font-bold text-text-main mb-1 group-hover:text-brand transition-colors">{stat.val}</p>
+                            <p className="text-[11px] md:text-[12px] text-text-muted italic">{stat.detail}</p>
                         </div>
                     ))}
                 </div>
@@ -257,8 +257,8 @@ const Team = () => {
                                         <div className="w-12 h-12 rounded-2xl bg-white shadow-soft flex items-center justify-center group-hover:bg-brand transition-colors duration-500">
                                             <item.icon className="w-5 h-5 text-brand group-hover:text-white" />
                                         </div>
-                                        <h4 className="text-base font-bold text-text-main group-hover:text-brand transition-colors tracking-tight uppercase">{item.title}</h4>
-                                        <p className="text-sm text-text-muted font-light leading-snug">{item.detail}</p>
+                                        <h4 className="text-lg font-bold text-text-main group-hover:text-brand transition-colors tracking-tight uppercase">{item.title}</h4>
+                                        <p className="text-base text-text-muted font-light leading-snug">{item.detail}</p>
                                     </div>
                                 ))}
                             </div>
@@ -273,7 +273,7 @@ const Team = () => {
                                 />
                                 <div className="absolute inset-x-8 bottom-8 bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-neutral-100">
                                     <Quote className="w-10 h-10 text-brand/20 mb-6" />
-                                    <p className="text-xl md:text-2xl font-serif italic text-text-main leading-relaxed mb-8">
+                                    <p className="text-2xl md:text-3xl font-display italic text-text-main leading-relaxed mb-8">
                                         "In legal practice, precision is not a goal—it is our fundamental baseline."
                                     </p>
                                     <div className="flex items-center gap-4">
@@ -304,21 +304,21 @@ const Team = () => {
                             <div>
                                 <div className="flex items-center gap-2 mb-6">
                                     <div className="h-px w-8 bg-brand"></div>
-                                    <span className="text-brand font-bold text-[10px] tracking-[0.4em] uppercase">Strategic Intersection</span>
+                                    <span className="text-brand font-bold text-[12px] tracking-[0.4em] uppercase">Strategic Intersection</span>
                                 </div>
-                                <h2 className="text-5xl md:text-7xl font-serif font-bold mb-8 text-white leading-[0.9] tracking-tighter">
+                                <h2 className="text-6xl md:text-8xl font-display font-bold mb-8 text-white leading-[0.9] tracking-tighter">
                                     Discuss your next <br />
                                     <span className="text-brand italic font-light">strategic milestone.</span>
                                 </h2>
-                                <p className="text-white/50 text-xl font-light mb-12 max-w-lg leading-relaxed">
+                                <p className="text-white/50 text-2xl font-light mb-12 max-w-lg leading-relaxed">
                                     Our award-winning partners are ready to bring global precision to your most complex legal challenges.
                                 </p>
                                 <div className="flex flex-wrap gap-6">
-                                    <Link to="/contact" className="px-10 py-5 bg-brand hover:bg-brand-light text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all flex items-center gap-3 group shadow-premium-btn">
+                                    <Link to="/contact" className="px-10 py-5 bg-brand hover:bg-brand-light text-white text-[13px] font-bold uppercase tracking-[0.3em] rounded-full transition-all flex items-center gap-3 group shadow-premium-btn">
                                         Partner Collaboration
                                         <ChevronRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                                     </Link>
-                                    <Link to="/practice-areas" className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-[0.3em] rounded-full transition-all border border-white/10 backdrop-blur-sm">
+                                    <Link to="/practice-areas" className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white text-[13px] font-bold uppercase tracking-[0.3em] rounded-full transition-all border border-white/10 backdrop-blur-sm">
                                         Explore Practices
                                     </Link>
                                 </div>
@@ -333,8 +333,8 @@ const Team = () => {
                                 ].map((badge, i) => (
                                     <div key={i} className="p-8 bg-white/5 border border-white/10 rounded-[2.5rem] backdrop-blur-md hover:bg-white/10 transition-all group">
                                         <badge.icon className="w-6 h-6 text-brand mb-4 group-hover:scale-110 transition-transform" />
-                                        <h4 className="font-bold text-xl mb-1">{badge.label}</h4>
-                                        <p className="text-white/40 text-[9px] uppercase tracking-[0.3em] font-bold">{badge.sub}</p>
+                                        <h4 className="font-bold text-2xl mb-1">{badge.label}</h4>
+                                        <p className="text-white/40 text-[11px] uppercase tracking-[0.3em] font-bold">{badge.sub}</p>
                                     </div>
                                 ))}
                             </div>

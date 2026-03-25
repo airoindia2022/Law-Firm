@@ -45,30 +45,30 @@ const Awards = () => {
                     >
                         <div className="flex items-center gap-2 mb-6">
                             <div className="h-px w-8 bg-brand"></div>
-                            <span className="text-brand font-bold text-xs tracking-widest uppercase">Recognition & Excellence</span>
+                            <span className="text-brand font-bold text-sm tracking-widest uppercase">Recognition & Excellence</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-bold font-serif text-text-main leading-tight mb-8">
+                        <h1 className="text-6xl md:text-8xl font-bold font-display text-text-main leading-tight mb-8">
                             A Legacy of <br />
                             <span className="text-brand italic">Distinction.</span>
                         </h1>
-                        <p className="text-xl text-text-muted leading-relaxed max-w-2xl mb-10">
+                        <p className="text-2xl text-text-muted leading-relaxed max-w-2xl mb-10">
                             Integrity Legal Centre is consistently recognized by premier international and domestic legal directories for our unwavering commitment to legal excellence and client success.
                         </p>
 
                         <div className="flex flex-wrap gap-8 py-8 border-t border-border mt-8">
                             <div className="flex flex-col">
-                                <span className="text-3xl font-bold text-text-main">20+</span>
-                                <span className="text-sm text-text-muted uppercase tracking-wider">Years of Excellence</span>
+                                <span className="text-4xl font-bold text-text-main">20+</span>
+                                <span className="text-base text-text-muted uppercase tracking-wider">Years of Excellence</span>
                             </div>
                             <div className="w-px h-12 bg-border hidden sm:block"></div>
                             <div className="flex flex-col">
-                                <span className="text-3xl font-bold text-text-main">50+</span>
-                                <span className="text-sm text-text-muted uppercase tracking-wider">Major Awards</span>
+                                <span className="text-4xl font-bold text-text-main">50+</span>
+                                <span className="text-base text-text-muted uppercase tracking-wider">Major Awards</span>
                             </div>
                             <div className="w-px h-12 bg-border hidden sm:block"></div>
                             <div className="flex flex-col">
-                                <span className="text-3xl font-bold text-text-main">100%</span>
-                                <span className="text-sm text-text-muted uppercase tracking-wider">Client Dedication</span>
+                                <span className="text-4xl font-bold text-text-main">100%</span>
+                                <span className="text-base text-text-muted uppercase tracking-wider">Client Dedication</span>
                             </div>
                         </div>
                     </motion.div>
@@ -80,8 +80,8 @@ const Awards = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div className="max-w-2xl">
-                            <h2 className="text-3xl md:text-4xl font-bold font-serif text-text-main mb-4">Honors & Accolades</h2>
-                            <p className="text-text-muted">Explore the recognition we have received from the world's most prestigious legal institutions.</p>
+                            <h2 className="text-4xl md:text-5xl font-bold font-display text-text-main mb-4">Honors & Accolades</h2>
+                            <p className="text-text-muted text-xl">Explore the recognition we have received from the world's most prestigious legal institutions.</p>
                         </div>
                     </div>
 
@@ -106,18 +106,18 @@ const Awards = () => {
                                         </div>
 
                                         <div className="flex items-center gap-2 mb-3">
-                                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand/70 bg-brand/5 px-2 py-1 rounded-md">{item.year}</span>
+                                            <span className="text-[12px] font-bold uppercase tracking-[0.15em] text-brand/70 bg-brand/5 px-2 py-1 rounded-md">{item.year}</span>
                                         </div>
 
-                                        <h3 className="text-xl font-bold font-serif text-text-main mb-3 group-hover:text-brand transition-colors leading-tight">
+                                        <h3 className="text-2xl font-bold font-display text-text-main mb-3 group-hover:text-brand transition-colors leading-tight">
                                             {item.title}
                                         </h3>
 
-                                        <p className="text-xs font-medium text-text-muted/80 uppercase tracking-wider mb-4 border-b border-border pb-4 w-fit">
+                                        <p className="text-sm font-medium text-text-muted/80 uppercase tracking-wider mb-4 border-b border-border pb-4 w-fit">
                                             {item.organization}
                                         </p>
 
-                                        <p className="text-sm text-text-muted leading-relaxed line-clamp-3">
+                                        <p className="text-base text-text-muted leading-relaxed line-clamp-3">
                                             {item.description}
                                         </p>
                                     </div>
@@ -145,11 +145,11 @@ const Awards = () => {
                         className="max-w-4xl mx-auto"
                     >
                         <Award className="h-16 w-16 text-brand mx-auto mb-10 opacity-40" />
-                        <h2 className="text-3xl md:text-5xl font-bold font-serif text-text-main leading-tight mb-10 italic">
+                        <h2 className="text-4xl md:text-6xl font-bold font-display text-text-main leading-tight mb-10 italic">
                             "Excellence is not an act, but a habit. Our awards reflect a decades-long commitment to setting the highest benchmarks in the legal profession."
                         </h2>
                         <div className="h-px w-24 bg-brand mx-auto mb-6"></div>
-                        <p className="text-sm font-bold uppercase tracking-[0.3em] text-text-muted">Integrity Legal Centre</p>
+                        <p className="text-base font-bold uppercase tracking-[0.3em] text-text-muted">Integrity Legal Centre</p>
                     </motion.div>
                 </div>
             </section>
@@ -164,8 +164,8 @@ const Awards = () => {
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                             <div>
-                                <h2 className="text-4xl font-bold font-serif mb-6 text-white">Partnering for Excellence</h2>
-                                <p className="text-white/70 text-lg mb-8 max-w-lg">
+                                <h2 className="text-5xl font-bold font-display mb-6 text-white leading-tight">Partnering for Excellence</h2>
+                                <p className="text-white/70 text-xl mb-8 max-w-lg">
                                     Our recognition is a testament to the trust our clients place in us. Let us bring our award-winning expertise to your legal challenges.
                                 </p>
                                 <div className="flex flex-wrap gap-4">
@@ -188,8 +188,8 @@ const Awards = () => {
                                 ].map((badge, i) => (
                                     <div key={i} className="p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-md">
                                         <Star className="h-5 w-5 text-brand mb-4 fill-brand/20" />
-                                        <h4 className="font-bold text-xl mb-1">{badge.label}</h4>
-                                        <p className="text-white/50 text-xs uppercase tracking-widest">{badge.sub}</p>
+                                        <h4 className="font-bold text-2xl mb-1">{badge.label}</h4>
+                                        <p className="text-white/50 text-base uppercase tracking-widest">{badge.sub}</p>
                                     </div>
                                 ))}
                             </div>

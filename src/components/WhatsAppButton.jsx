@@ -38,7 +38,7 @@ const WhatsAppButton = () => {
             </svg>
 
             {/* Tooltip Label */}
-            <div className="absolute right-full mr-6 px-4 py-2 bg-[#0A0F1C] text-white text-[10px] font-bold tracking-[0.2em] uppercase rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 whitespace-nowrap">
+            <div className="absolute right-full mr-6 px-4 py-2 bg-[#0A0F1C] text-white text-[12px] font-bold tracking-[0.2em] uppercase rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 whitespace-nowrap">
                 Connect With Us
                 <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-[#0A0F1C] rotate-45"></div>
             </div>
