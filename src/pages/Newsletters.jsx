@@ -52,7 +52,7 @@ const Newsletters = () => {
                             <span className="w-12 h-[1px] bg-brand"></span>
                             <span className="text-brand font-bold text-sm tracking-[0.3em] uppercase">Intelligence & Insights</span>
                         </div>
-                        <h1 className="text-7xl md:text-9xl font-display font-bold text-primary mb-8 leading-[0.9]">
+                        <h1 className="text-5xl md:text-7xl lg:text-9xl font-display font-bold text-primary mb-6 md:mb-8 leading-[0.9]">
                             Legal <br />
                             <span className="italic font-normal text-brand-light">Briefings.</span>
                         </h1>
@@ -87,7 +87,7 @@ const Newsletters = () => {
                                                     <Calendar className="h-3 w-3" />
                                                     {item.month} {item.year}
                                                 </div>
-                                                <h3 className="text-4xl md:text-5xl font-display font-bold text-primary group-hover:text-brand transition-colors duration-500 leading-tight">
+                                                <h3 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-primary group-hover:text-brand transition-colors duration-500 leading-tight">
                                                     {item.title}
                                                 </h3>
                                             </div>
@@ -139,7 +139,7 @@ const Newsletters = () => {
             {/* Newsletter Subscription */}
             <section className="py-24 bg-background">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-primary rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-white">
+                    <div className="bg-primary rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 relative overflow-hidden text-white">
                         {/* Background Decoration */}
                         <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
                             <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-[120px]"></div>
@@ -152,7 +152,7 @@ const Newsletters = () => {
                                     <div className="h-px w-8 bg-brand"></div>
                                     <span className="text-brand font-bold text-sm tracking-widest uppercase">Institutional Feed</span>
                                 </div>
-                                <h2 className="text-5xl md:text-6xl font-bold font-display mb-6 text-white leading-tight">
+                                <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold font-display mb-6 text-white leading-tight">
                                     Stay Ahead of the <br />
                                     <span className="text-brand italic font-normal">Regulatory Curve.</span>
                                 </h2>
@@ -168,7 +168,7 @@ const Newsletters = () => {
                                         placeholder="Institutional email"
                                         className="flex-grow bg-transparent border-none px-6 py-4 text-white focus:ring-0 placeholder:text-white/30 text-base"
                                     />
-                                    <button className="px-8 py-4 bg-brand hover:bg-brand-light text-white font-bold rounded-xl transition-all shadow-premium-btn whitespace-nowrap text-sm uppercase tracking-widest">
+                                    <button className="px-6 md:px-8 py-3 md:py-4 bg-brand hover:bg-brand-light text-white font-bold rounded-xl transition-all shadow-premium-btn whitespace-nowrap text-xs md:text-sm uppercase tracking-widest">
                                         {result || "Subscribe"}
                                     </button>
                                 </form>

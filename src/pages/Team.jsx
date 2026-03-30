@@ -83,7 +83,7 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
 
 const CategoryTitle = ({ title, tagline, description, center = false }) => (
     <div className={`max-w-3xl mb-16 md:mb-24 ${center ? 'mx-auto text-center' : ''}`}>
-        <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-text-main mb-8 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-display font-bold text-text-main mb-6 md:mb-8 leading-[1.1]">
             {title}
         </h2>
         {description && (
@@ -150,11 +150,11 @@ const Team = () => {
                         <span className="inline-block text-brand font-bold text-[0.75rem] tracking-[0.5em] uppercase mb-8">
                             Empowering Global Ambitions
                         </span>
-                        <h1 className="text-7xl md:text-8xl lg:text-[10rem] font-display font-bold text-white leading-[0.85] tracking-tighter mb-12">
+                        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-white leading-[0.9] tracking-tighter mb-8 md:mb-12">
                             The <span className="italic font-light text-brand">Architects</span> <br />
                             of Strategy.
                         </h1>
-                        <p className="text-2xl md:text-3xl text-white/40 font-display italic font-light max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-2xl lg:text-3xl text-white/40 font-display italic font-light max-w-2xl mx-auto leading-relaxed px-4">
                             "Innovation in thought, precision in execution. We are the partners to your global growth."
                         </p>
                     </motion.div>
@@ -174,15 +174,15 @@ const Team = () => {
 
             {/* 2. STAT STRIP */}
             <section className="relative z-20 -mt-10 md:-mt-20 px-4 md:px-6">
-                <div className="max-w-7xl mx-auto bg-white shadow-2xl rounded-3xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 border border-neutral-100 grid grid-cols-2 md:flex md:flex-wrap items-center justify-around gap-8 md:gap-12">
+                <div className="max-w-7xl mx-auto bg-white shadow-2xl rounded-3xl md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-16 border border-neutral-100 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-12">
                     {[
                         { label: "Collective Expertise", val: "500+", detail: "Professional Years" },
                         { label: "Recognition", val: "Tier 1", detail: "Chambers Ranked" },
                         { label: "Capabilities", val: "PAN-INDIA", detail: "Full Service" }
                     ].map((stat, i) => (
-                        <div key={i} className="text-center group">
+                        <div key={i} className="text-center group border-b md:border-b-0 border-neutral-100 pb-6 md:pb-0 last:border-0 w-full md:w-auto">
                             <p className="text-[0.6875rem] md:text-[0.75rem] font-bold text-brand uppercase tracking-[0.12em] md:tracking-[0.14em] mb-2">{stat.label}</p>
-                            <p className="text-4xl md:text-5xl font-display font-bold text-text-main mb-1 group-hover:text-brand transition-colors">{stat.val}</p>
+                            <p className="text-3xl md:text-5xl font-display font-bold text-text-main mb-1 group-hover:text-brand transition-colors">{stat.val}</p>
                             <p className="text-[0.6875rem] md:text-[0.75rem] text-text-muted italic">{stat.detail}</p>
                         </div>
                     ))}
@@ -240,7 +240,7 @@ const Team = () => {
             <section className="py-32 lg:py-48 bg-[#FDFCFB] border-y border-neutral-100 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand/[0.02] -skew-x-12 translate-x-20"></div>
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <div className="space-y-12">
                             <CategoryTitle
                                 title="Why Visionaries Choose Us."
@@ -306,19 +306,19 @@ const Team = () => {
                                     <div className="h-px w-8 bg-brand"></div>
                                     <span className="text-brand font-bold text-[0.75rem] tracking-[0.4em] uppercase">Strategic Intersection</span>
                                 </div>
-                                <h2 className="text-6xl md:text-8xl font-display font-bold mb-8 text-white leading-[0.9] tracking-tighter">
+                                <h2 className="text-4xl sm:text-6xl md:text-8xl font-display font-bold mb-8 text-white leading-[0.9] tracking-tighter">
                                     Discuss your next <br />
                                     <span className="text-brand italic font-light">strategic milestone.</span>
                                 </h2>
                                 <p className="text-white/50 text-2xl font-light mb-12 max-w-lg leading-relaxed">
                                     Our award-winning partners are ready to bring global precision to your most complex legal challenges.
                                 </p>
-                                <div className="flex flex-wrap gap-6">
-                                    <Link to="/contact" className="px-10 py-5 bg-brand hover:bg-brand-light text-white text-[0.8125rem] font-bold uppercase tracking-[0.3em] rounded-full transition-all flex items-center gap-3 group shadow-premium-btn">
+                                <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6">
+                                    <Link to="/contact" className="px-10 py-5 bg-brand hover:bg-brand-light text-white text-[0.8125rem] font-bold uppercase tracking-[0.3em] rounded-full transition-all flex items-center justify-center gap-3 group shadow-premium-btn w-full sm:w-auto">
                                         Partner Collaboration
                                         <ChevronRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                                     </Link>
-                                    <Link to="/practice-areas" className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white text-[0.8125rem] font-bold uppercase tracking-[0.3em] rounded-full transition-all border border-white/10 backdrop-blur-sm">
+                                    <Link to="/practice-areas" className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white text-[0.8125rem] font-bold uppercase tracking-[0.3em] rounded-full transition-all border border-white/10 backdrop-blur-sm flex items-center justify-center w-full sm:w-auto">
                                         Explore Practices
                                     </Link>
                                 </div>

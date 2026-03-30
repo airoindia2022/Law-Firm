@@ -70,15 +70,15 @@ const Hero = () => {
                 >
                     <div className="w-24 h-1 bg-brand mb-4"></div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-tight max-w-5xl tracking-tight">
-                        Integrity Legal Center the most trusted <span className="italic text-brand-light">Law firm</span>
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white leading-[1.1] max-w-5xl tracking-tight px-2">
+                        Integrity Legal Center <br className="hidden md:block" /> the most trusted <span className="italic text-brand-light">Law firm</span>
                     </h1>
 
                     <div className="flex flex-col sm:flex-row gap-6 mt-8">
-                        <Link to="/contact" className="px-10 py-4 bg-brand text-white font-bold uppercase tracking-widest text-sm hover:bg-brand-light transition-all duration-500 shadow-premium-btn">
+                        <Link to="/contact" className="w-full sm:w-auto px-8 py-4 bg-brand text-white font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-brand-light transition-all duration-500 shadow-premium-btn text-center">
                             Request Consultation
                         </Link>
-                        <Link to="/practice-areas" className="px-10 py-4 bg-transparent border border-brand text-brand font-bold uppercase tracking-widest text-sm hover:bg-brand hover:text-white transition-all duration-500 backdrop-blur-sm">
+                        <Link to="/practice-areas" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-brand text-brand font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-brand hover:text-white transition-all duration-500 backdrop-blur-sm text-center">
                             Our Expertise
                         </Link>
                     </div>
@@ -127,7 +127,7 @@ const Hero = () => {
 }
 
 const AboutSection = () => (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-background/50 rounded-l-[100px] -z-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -138,22 +138,22 @@ const AboutSection = () => (
                     className="flex-1"
                 >
                     <span className="text-brand font-bold text-sm tracking-[0.3em] uppercase mb-4 block">About the Firm</span>
-                    <h2 className="text-4xl md:text-5xl font-display font-bold text-text-main mb-8 leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold text-text-main mb-6 md:mb-8 leading-tight">
                         Integrity Legal Centre is recognized among the most <span className="italic text-brand">trusted Law firms in India</span>
                     </h2>
-                    <div className="space-y-6 text-xl text-text-muted leading-relaxed">
+                    <div className="space-y-4 md:space-y-6 text-lg md:text-xl text-text-muted leading-relaxed">
                         <p>
                             Integrity Legal Centre is an award-winning law firm in India, having offices at New Delhi NCR, Bhubaneswar, Chandigarh, Kolkata, Allahabad and associate offices across India.
                         </p>
-                        <p>
-                            We provide comprehensive legal services and solutions to a broad spectrum of domestic and foreign clients. Integrity Legal Centre is a top law firm in Delhi awarded across its practice areas, recognizing our members among the best business and litigation lawyers.
+                        <p className="hidden sm:block">
+                            We provide comprehensive legal services and solutions to a broad spectrum of domestic and foreign clients. Integrity Legal Centre is a top law firm in Delhi awarded across its practice areas.
                         </p>
                     </div>
-                    <div className="flex gap-6 mt-10">
-                        <Link to="/contact" className="premium-btn">
+                    <div className="flex flex-col sm:flex-row gap-4 mt-8 md:mt-10">
+                        <Link to="/contact" className="premium-btn w-full sm:w-auto text-center">
                             Contact Us
                         </Link>
-                        <Link to="/team" className="px-8 py-4 border border-brand text-brand font-bold text-[0.8125rem] uppercase tracking-[0.3em] hover:bg-brand hover:text-white transition-all duration-500">
+                        <Link to="/team" className="w-full sm:w-auto px-6 py-4 border border-brand text-brand font-bold text-[0.75rem] uppercase tracking-[0.2em] hover:bg-brand hover:text-white transition-all duration-500 text-center">
                             Our Team
                         </Link>
                     </div>
@@ -164,11 +164,11 @@ const AboutSection = () => (
                     viewport={{ once: true }}
                     className="flex-1 relative"
                 >
-                    <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-edge">
+                    <div className="relative z-10 rounded-2xl md:rounded-[2rem] overflow-hidden shadow-edge">
                         <img
                             src={lady}
                             alt="Law Office"
-                            className="w-full h-[500px] object-cover"
+                            className="w-full h-[300px] md:h-[500px] object-cover"
                         />
                         <div className="absolute inset-0 bg-brand/10 mix-blend-multiply"></div>
                     </div>
@@ -186,7 +186,7 @@ const PracticeAreaItem = ({ title, icon: Icon, to, delay }) => (
         transition={{ delay }}
         className="group relative"
     >
-        <Link to={to} className="block p-8 bg-background border border-border/50 hover:bg-white hover:shadow-premium-hover transition-all duration-500 rounded-xl h-full">
+        <Link to={to} className="block p-6 md:p-8 bg-background border border-border/50 hover:bg-white hover:shadow-premium-hover transition-all duration-500 rounded-xl h-full">
             <div className="flex items-start justify-between mb-6">
                 <div className="w-12 h-12 bg-brand/5 rounded-xl flex items-center justify-center group-hover:bg-brand transition-all duration-500">
                     <Icon className="w-6 h-6 text-brand group-hover:text-white transition-colors" />
@@ -213,11 +213,11 @@ const PracticeSection = () => {
     ];
 
     return (
-        <section className="py-24 bg-background">
+        <section className="py-16 md:py-24 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 md:mb-16">
                     <span className="text-brand font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Our Specializations</span>
-                    <h2 className="text-4xl md:text-5xl font-display font-bold text-text-main">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold text-text-main">
                         Comprehensive Legal <span className="italic text-brand">Solutions</span>
                     </h2>
                 </div>
@@ -242,7 +242,7 @@ const TestimonialCard = ({ quote, author, position, delay }) => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay }}
-        className="p-10 bg-white border border-border rounded-2xl shadow-soft hover:shadow-premium transition-all duration-500 flex flex-col justify-between"
+        className="p-6 md:p-10 bg-white border border-border rounded-2xl shadow-soft hover:shadow-premium transition-all duration-500 flex flex-col justify-between"
     >
         <div>
             <div className="text-brand mb-6">
@@ -262,12 +262,12 @@ const TestimonialCard = ({ quote, author, position, delay }) => (
 );
 
 const TestimonialsSection = () => (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-                <div className="max-w-2xl">
+                <div className="max-w-2xl text-center md:text-left">
                     <span className="text-brand font-bold text-xs tracking-[0.3em] uppercase mb-4 block">Testimonials</span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-main leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-text-main leading-tight">
                         What Our <span className="italic text-brand">Clients Say</span>
                     </h2>
                 </div>
@@ -309,7 +309,7 @@ const AffiliationsSection = () => {
     const marqueeItems = [...affiliations, ...affiliations, ...affiliations];
 
     return (
-        <section className="py-24 bg-white border-t border-border overflow-hidden">
+        <section className="py-16 md:py-24 bg-white border-t border-border overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
                 <div className="text-center">
                     <span className="text-brand font-bold text-sm tracking-[0.3em] uppercase mb-4 block">Global Network</span>

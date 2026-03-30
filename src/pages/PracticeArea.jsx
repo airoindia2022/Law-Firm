@@ -58,10 +58,10 @@ const PracticeArea = () => {
                         <div className="inline-block px-4 py-2 bg-white rounded-full shadow-sm border border-border mb-8">
                             <span className="text-secondary font-bold text-sm tracking-widest uppercase">Core Domain Expertise</span>
                         </div>
-                        <h1 className="text-6xl md:text-8xl font-display font-bold text-text-main leading-tight mb-8">
+                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-display font-bold text-text-main leading-tight mb-8">
                             {area.name}
                         </h1>
-                        <p className="text-2xl text-text-muted leading-relaxed font-light italic max-w-2xl border-l-2 border-brand/20 pl-8">
+                        <p className="text-lg md:text-2xl text-text-muted leading-relaxed font-light italic max-w-2xl border-l-2 border-brand/20 pl-6 md:pl-8">
                             "{area.description}"
                         </p>
                     </motion.div>
@@ -72,9 +72,9 @@ const PracticeArea = () => {
                 <div className="flex flex-col lg:flex-row gap-20">
                     <div className="flex-1">
                         <div className="mb-24">
-                            <div className="flex items-center gap-6 mb-16">
-                                <h2 className="text-4xl font-display font-bold text-text-main whitespace-nowrap uppercase tracking-widest">Client <span className="italic gradient-text">Capabilities</span></h2>
-                                <div className="h-[1px] w-full bg-border"></div>
+                            <div className="flex flex-col sm:flex-row items-center gap-6 mb-16">
+                                <h2 className="text-3xl md:text-4xl font-display font-bold text-text-main uppercase tracking-widest text-center sm:text-left">Client <span className="italic gradient-text">Capabilities</span></h2>
+                                <div className="h-[1px] flex-1 bg-border hidden sm:block"></div>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 {services.map((service, index) => (
@@ -103,7 +103,7 @@ const PracticeArea = () => {
                     </div>
 
                     <div className="w-full lg:w-[400px] space-y-10">
-                        <div className="card-light !p-10 relative overflow-hidden group">
+                        <div className="card-light p-8 md:p-10 relative overflow-hidden group">
                             <h4 className="text-brand font-bold mb-10 text-xs uppercase tracking-widest">Global Expertise</h4>
                             <div className="space-y-6">
                                 {MENU_ITEMS[2].submenu?.filter(s => s.path && !s.path.includes(slug)).slice(0, 6).map(s => (

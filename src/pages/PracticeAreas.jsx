@@ -10,7 +10,7 @@ const PracticeAreaCard = ({ name, path, image, description, index }) => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: index * 0.05 }}
-        className="group relative h-[420px] rounded-[2rem] overflow-hidden bg-white border border-border shadow-soft hover:shadow-premium transition-all duration-500"
+        className="group relative min-h-[380px] md:h-[420px] rounded-[2rem] overflow-hidden bg-white border border-border shadow-soft hover:shadow-premium transition-all duration-500"
     >
         <Link to={path} className="h-full flex flex-col">
             <div className="relative h-2/3 overflow-hidden">
@@ -62,7 +62,7 @@ const PracticeAreas = () => {
                                 <span className="text-secondary font-bold text-sm tracking-widest uppercase">Specialized Advisory</span>
                             </div>
 
-                            <h1 className="text-6xl md:text-8xl font-bold font-display text-text-main leading-tight mb-8">
+                            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold font-display text-text-main leading-tight mb-6 md:mb-8">
                                 Infinite <br />
                                 <span className="gradient-text italic">Expertise.</span>
                             </h1>
@@ -92,7 +92,7 @@ const PracticeAreas = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
                         <div className="lg:col-span-1">
-                            <h2 className="text-5xl font-bold font-display text-text-main tracking-tight leading-tight mb-6">
+                            <h2 className="text-3xl md:text-5xl font-bold font-display text-text-main tracking-tight leading-tight mb-6">
                                 Why Strategic <br /><span className="gradient-text">Insight Matters.</span>
                             </h2>
                             <p className="text-text-muted text-xl leading-relaxed">

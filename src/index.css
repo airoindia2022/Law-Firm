@@ -1,5 +1,17 @@
 html {
-    font-size: 1.25rem;
+    font-size: 1rem; /* Base for mobile */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 1.125rem; /* Tablet */
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 1.25rem; /* Desktop */
+    }
 }
 
 :root {

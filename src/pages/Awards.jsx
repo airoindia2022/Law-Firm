@@ -47,11 +47,11 @@ const Awards = () => {
                             <div className="h-px w-8 bg-brand"></div>
                             <span className="text-brand font-bold text-sm tracking-widest uppercase">Recognition & Excellence</span>
                         </div>
-                        <h1 className="text-6xl md:text-8xl font-bold font-display text-text-main leading-tight mb-8">
+                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold font-display text-text-main leading-tight mb-6 md:mb-8">
                             A Legacy of <br />
                             <span className="text-brand italic">Distinction.</span>
                         </h1>
-                        <p className="text-2xl text-text-muted leading-relaxed max-w-2xl mb-10">
+                        <p className="text-lg md:text-2xl text-text-muted leading-relaxed max-w-2xl mb-10 font-light">
                             Integrity Legal Centre is consistently recognized by premier international and domestic legal directories for our unwavering commitment to legal excellence and client success.
                         </p>
 
@@ -80,7 +80,7 @@ const Awards = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div className="max-w-2xl">
-                            <h2 className="text-4xl md:text-5xl font-bold font-display text-text-main mb-4">Honors & Accolades</h2>
+                            <h2 className="text-3xl md:text-5xl font-bold font-display text-text-main mb-4">Honors & Accolades</h2>
                             <p className="text-text-muted text-xl">Explore the recognition we have received from the world's most prestigious legal institutions.</p>
                         </div>
                     </div>
@@ -145,7 +145,7 @@ const Awards = () => {
                         className="max-w-4xl mx-auto"
                     >
                         <Award className="h-16 w-16 text-brand mx-auto mb-10 opacity-40" />
-                        <h2 className="text-4xl md:text-6xl font-bold font-display text-text-main leading-tight mb-10 italic">
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold font-display text-text-main leading-tight mb-8 md:mb-10 italic px-4">
                             "Excellence is not an act, but a habit. Our awards reflect a decades-long commitment to setting the highest benchmarks in the legal profession."
                         </h2>
                         <div className="h-px w-24 bg-brand mx-auto mb-6"></div>
@@ -157,14 +157,14 @@ const Awards = () => {
             {/* Final CTA/Info Section */}
             <section className="py-24 bg-background">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-primary rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-white">
+                    <div className="bg-primary rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 relative overflow-hidden text-white">
                         <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
                             <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-[120px]"></div>
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                             <div>
-                                <h2 className="text-5xl font-bold font-display mb-6 text-white leading-tight">Partnering for Excellence</h2>
+                                <h2 className="text-3xl md:text-5xl font-bold font-display mb-6 text-white leading-tight">Partnering for Excellence</h2>
                                 <p className="text-white/70 text-xl mb-8 max-w-lg">
                                     Our recognition is a testament to the trust our clients place in us. Let us bring our award-winning expertise to your legal challenges.
                                 </p>

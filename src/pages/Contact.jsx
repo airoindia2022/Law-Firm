@@ -53,7 +53,7 @@ const Contact = () => {
                             <span className="w-2 h-2 rounded-full bg-[#B8860B] animate-pulse"></span>
                             <span className="text-white/80 font-bold text-[0.8125rem] tracking-[0.2em] uppercase">Global Reach</span>
                         </div>
-                        <h1 className="text-6xl md:text-8xl font-bold font-display text-white leading-[1.1] mb-8">
+                        <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold font-display text-white leading-[1.1] mb-6 md:mb-8">
                             Connect with <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] to-[#D4AF37] italic">
                                 Strategic Counsel.
@@ -69,7 +69,7 @@ const Contact = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
             </section>
 
-            <section className="py-24 lg:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-16 lg:gap-24 relative z-20 -mt-10">
+            <section className="py-16 md:py-24 lg:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 md:gap-16 lg:gap-24 relative z-20 -mt-8 md:-mt-10">
                 {/* Left Side: Form */}
                 <div className="flex-1">
                     <motion.div
@@ -77,7 +77,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="mb-16 bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] relative overflow-hidden"
+                        className="mb-8 md:mb-16 bg-white p-6 md:p-12 rounded-2xl md:rounded-3xl border border-gray-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] relative overflow-hidden"
                     >
                         {/* Decorative Top Line */}
                         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#B8860B] to-[#D4AF37]"></div>
@@ -186,7 +186,7 @@ const Contact = () => {
                             ].map((office, idx) => (
                                 <div
                                     key={idx}
-                                    className="p-8 rounded-[1.5rem] bg-white border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:border-[#B8860B]/30 hover:shadow-[0_20px_40px_-15px_rgba(184,134,11,0.1)] transition-all duration-500 group"
+                                    className="p-6 md:p-8 rounded-2xl md:rounded-[1.5rem] bg-white border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:border-[#B8860B]/30 hover:shadow-[0_20px_40px_-15px_rgba(184,134,11,0.1)] transition-all duration-500 group"
                                 >
                                     <div className="flex items-center gap-3 mb-6">
                                         <span className="w-1.5 h-1.5 rounded-full bg-[#B8860B]"></span>
