@@ -56,7 +56,7 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
                             <motion.span
                                 initial={false}
                                 animate={{ color: isHovered ? '#B6890C' : '#FFFFFF' }}
-                                className="text-[17px] font-bold uppercase tracking-[0.3em]"
+                                className="text-[1.0625rem] font-bold uppercase tracking-[0.3em]"
                             >
                                 {member.role}
                             </motion.span>
@@ -147,10 +147,10 @@ const Team = () => {
                         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                         className="max-w-5xl mx-auto"
                     >
-                        <span className="inline-block text-brand font-bold text-[12px] tracking-[0.5em] uppercase mb-8">
+                        <span className="inline-block text-brand font-bold text-[0.75rem] tracking-[0.5em] uppercase mb-8">
                             Empowering Global Ambitions
                         </span>
-                        <h1 className="text-7xl md:text-8xl lg:text-[160px] font-display font-bold text-white leading-[0.85] tracking-tighter mb-12">
+                        <h1 className="text-7xl md:text-8xl lg:text-[10rem] font-display font-bold text-white leading-[0.85] tracking-tighter mb-12">
                             The <span className="italic font-light text-brand">Architects</span> <br />
                             of Strategy.
                         </h1>
@@ -167,7 +167,7 @@ const Team = () => {
                     transition={{ delay: 1.5, duration: 1 }}
                     className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
                 >
-                    <span className="text-white/20 text-[9px] uppercase tracking-[0.4em] font-bold">Discover</span>
+                    <span className="text-white/20 text-[0.5625rem] uppercase tracking-[0.4em] font-bold">Discover</span>
                     <div className="w-[1px] h-12 bg-gradient-to-b from-brand/50 to-transparent"></div>
                 </motion.div>
             </header>
@@ -181,9 +181,9 @@ const Team = () => {
                         { label: "Capabilities", val: "PAN-INDIA", detail: "Full Service" }
                     ].map((stat, i) => (
                         <div key={i} className="text-center group">
-                            <p className="text-[11px] md:text-[12px] font-bold text-brand uppercase tracking-[0.12em] md:tracking-[0.14em] mb-2">{stat.label}</p>
+                            <p className="text-[0.6875rem] md:text-[0.75rem] font-bold text-brand uppercase tracking-[0.12em] md:tracking-[0.14em] mb-2">{stat.label}</p>
                             <p className="text-4xl md:text-5xl font-display font-bold text-text-main mb-1 group-hover:text-brand transition-colors">{stat.val}</p>
-                            <p className="text-[11px] md:text-[12px] text-text-muted italic">{stat.detail}</p>
+                            <p className="text-[0.6875rem] md:text-[0.75rem] text-text-muted italic">{stat.detail}</p>
                         </div>
                     ))}
                 </div>
@@ -304,7 +304,7 @@ const Team = () => {
                             <div>
                                 <div className="flex items-center gap-2 mb-6">
                                     <div className="h-px w-8 bg-brand"></div>
-                                    <span className="text-brand font-bold text-[12px] tracking-[0.4em] uppercase">Strategic Intersection</span>
+                                    <span className="text-brand font-bold text-[0.75rem] tracking-[0.4em] uppercase">Strategic Intersection</span>
                                 </div>
                                 <h2 className="text-6xl md:text-8xl font-display font-bold mb-8 text-white leading-[0.9] tracking-tighter">
                                     Discuss your next <br />
@@ -314,11 +314,11 @@ const Team = () => {
                                     Our award-winning partners are ready to bring global precision to your most complex legal challenges.
                                 </p>
                                 <div className="flex flex-wrap gap-6">
-                                    <Link to="/contact" className="px-10 py-5 bg-brand hover:bg-brand-light text-white text-[13px] font-bold uppercase tracking-[0.3em] rounded-full transition-all flex items-center gap-3 group shadow-premium-btn">
+                                    <Link to="/contact" className="px-10 py-5 bg-brand hover:bg-brand-light text-white text-[0.8125rem] font-bold uppercase tracking-[0.3em] rounded-full transition-all flex items-center gap-3 group shadow-premium-btn">
                                         Partner Collaboration
                                         <ChevronRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                                     </Link>
-                                    <Link to="/practice-areas" className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white text-[13px] font-bold uppercase tracking-[0.3em] rounded-full transition-all border border-white/10 backdrop-blur-sm">
+                                    <Link to="/practice-areas" className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white text-[0.8125rem] font-bold uppercase tracking-[0.3em] rounded-full transition-all border border-white/10 backdrop-blur-sm">
                                         Explore Practices
                                     </Link>
                                 </div>
@@ -334,7 +334,7 @@ const Team = () => {
                                     <div key={i} className="p-8 bg-white/5 border border-white/10 rounded-[2.5rem] backdrop-blur-md hover:bg-white/10 transition-all group">
                                         <badge.icon className="w-6 h-6 text-brand mb-4 group-hover:scale-110 transition-transform" />
                                         <h4 className="font-bold text-2xl mb-1">{badge.label}</h4>
-                                        <p className="text-white/40 text-[11px] uppercase tracking-[0.3em] font-bold">{badge.sub}</p>
+                                        <p className="text-white/40 text-[0.6875rem] uppercase tracking-[0.3em] font-bold">{badge.sub}</p>
                                     </div>
                                 ))}
                             </div>
@@ -347,3 +347,4 @@ const Team = () => {
 }
 
 export default Team
+

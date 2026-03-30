@@ -75,7 +75,7 @@ const PracticeAreas = () => {
                         <div className="hidden lg:block pb-4">
                             <div className="flex flex-col items-center">
                                 <div className="h-24 w-[2px] bg-gradient-to-t from-brand to-transparent rounded-full"></div>
-                                <div className="mt-6 -rotate-90 origin-center text-[12px] font-bold text-text-muted uppercase tracking-widest whitespace-nowrap translate-y-8">Global Focus</div>
+                                <div className="mt-6 -rotate-90 origin-center text-[0.75rem] font-bold text-text-muted uppercase tracking-widest whitespace-nowrap translate-y-8">Global Focus</div>
                             </div>
                         </div>
                     </motion.div>
@@ -123,3 +123,4 @@ const PracticeAreas = () => {
 }
 
 export default PracticeAreas
+

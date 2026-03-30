@@ -41,7 +41,7 @@ const PracticeArea = () => {
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-10">
-                    <div className="flex items-center gap-3 text-secondary text-[12px] font-bold uppercase tracking-widest mb-10">
+                    <div className="flex items-center gap-3 text-secondary text-[0.75rem] font-bold uppercase tracking-widest mb-10">
                         <Link to="/" className="hover:text-brand transition-colors">Home</Link>
                         <span className="text-border">&gt;</span>
                         <Link to="/practice-areas" className="hover:text-brand transition-colors">Practice Areas</Link>
@@ -136,3 +136,4 @@ const PracticeArea = () => {
 }
 
 export default PracticeArea
+

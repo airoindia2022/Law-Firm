@@ -108,7 +108,7 @@ const Footer = () => {
                                 placeholder="Corporate Email"
                                 className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-base focus:outline-none focus:border-brand/50 focus:bg-white/10 transition-all text-white placeholder:text-white/30"
                             />
-                            <button type="submit" className="absolute right-2 top-2 bottom-2 px-6 bg-brand text-white rounded-full text-[12px] font-bold tracking-widest uppercase hover:bg-brand-light transition-all shadow-lg active:scale-95">
+                            <button type="submit" className="absolute right-2 top-2 bottom-2 px-6 bg-brand text-white rounded-full text-[0.75rem] font-bold tracking-widest uppercase hover:bg-brand-light transition-all shadow-lg active:scale-95">
                                 {result || "Join"}
                             </button>
                         </form>
@@ -118,7 +118,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <p className="text-white/30 text-[13px] font-bold tracking-widest uppercase">
+                    <p className="text-white/30 text-[0.8125rem] font-bold tracking-widest uppercase">
                         © {new Date().getFullYear()} <a className="hover:text-brand transition-colors underline-offset-4 hover:underline" href="https://airo-india.vercel.app/">AIRO India</a>. All Rights Reserved.
                     </p>
                 </div>
@@ -128,3 +128,4 @@ const Footer = () => {
 }
 
 export default Footer
+

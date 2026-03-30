@@ -51,7 +51,7 @@ const Contact = () => {
                     >
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-md mb-8">
                             <span className="w-2 h-2 rounded-full bg-[#B8860B] animate-pulse"></span>
-                            <span className="text-white/80 font-bold text-[13px] tracking-[0.2em] uppercase">Global Reach</span>
+                            <span className="text-white/80 font-bold text-[0.8125rem] tracking-[0.2em] uppercase">Global Reach</span>
                         </div>
                         <h1 className="text-6xl md:text-8xl font-bold font-display text-white leading-[1.1] mb-8">
                             Connect with <br />
@@ -92,7 +92,7 @@ const Contact = () => {
                         <form onSubmit={onSubmit} className="space-y-8">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="space-y-2 relative group">
-                                    <label className="text-[13px] font-bold text-[#94A3B8] uppercase tracking-[0.15em] ml-1 group-focus-within:text-[#B8860B] transition-colors">Principal Name</label>
+                                    <label className="text-[0.8125rem] font-bold text-[#94A3B8] uppercase tracking-[0.15em] ml-1 group-focus-within:text-[#B8860B] transition-colors">Principal Name</label>
                                     <div className="relative">
                                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                             <User className="h-5 w-5 text-gray-400 group-focus-within:text-[#B8860B] transition-colors" />
@@ -101,7 +101,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div className="space-y-2 relative group">
-                                    <label className="text-[13px] font-bold text-[#94A3B8] uppercase tracking-[0.15em] ml-1 group-focus-within:text-[#B8860B] transition-colors">Corporate Email</label>
+                                    <label className="text-[0.8125rem] font-bold text-[#94A3B8] uppercase tracking-[0.15em] ml-1 group-focus-within:text-[#B8860B] transition-colors">Corporate Email</label>
                                     <div className="relative">
                                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                             <Mail className="h-5 w-5 text-gray-400 group-focus-within:text-[#B8860B] transition-colors" />
@@ -111,7 +111,7 @@ const Contact = () => {
                                 </div>
                             </div>
                             <div className="space-y-2 relative group">
-                                <label className="text-[13px] font-bold text-[#94A3B8] uppercase tracking-[0.15em] ml-1 group-focus-within:text-[#B8860B] transition-colors">Jurisdiction / Subject</label>
+                                <label className="text-[0.8125rem] font-bold text-[#94A3B8] uppercase tracking-[0.15em] ml-1 group-focus-within:text-[#B8860B] transition-colors">Jurisdiction / Subject</label>
                                 <div className="relative">
                                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                                         <Briefcase className="h-5 w-5 text-gray-400 group-focus-within:text-[#B8860B] transition-colors" />
@@ -120,7 +120,7 @@ const Contact = () => {
                                 </div>
                             </div>
                             <div className="space-y-2 relative group">
-                                <label className="text-[13px] font-bold text-[#94A3B8] uppercase tracking-[0.15em] ml-1 group-focus-within:text-[#B8860B] transition-colors">Detailed Briefing</label>
+                                <label className="text-[0.8125rem] font-bold text-[#94A3B8] uppercase tracking-[0.15em] ml-1 group-focus-within:text-[#B8860B] transition-colors">Detailed Briefing</label>
                                 <div className="relative">
                                     <div className="absolute top-4 left-0 pl-4 pointer-events-none">
                                         <FileText className="h-5 w-5 text-gray-400 group-focus-within:text-[#B8860B] transition-colors" />
@@ -130,7 +130,7 @@ const Contact = () => {
                             </div>
 
                             <div className="pt-2">
-                                <button disabled={isSubmitting} type="submit" className="w-full relative inline-flex items-center justify-center px-8 py-5 bg-[#0F172A] text-white text-[14px] font-bold uppercase tracking-[0.2em] rounded-xl overflow-hidden transition-all hover:bg-[#B8860B] hover:shadow-[0_10px_20px_rgba(184,134,11,0.2)] disabled:opacity-70 disabled:cursor-not-allowed group/btn">
+                                <button disabled={isSubmitting} type="submit" className="w-full relative inline-flex items-center justify-center px-8 py-5 bg-[#0F172A] text-white text-[0.875rem] font-bold uppercase tracking-[0.2em] rounded-xl overflow-hidden transition-all hover:bg-[#B8860B] hover:shadow-[0_10px_20px_rgba(184,134,11,0.2)] disabled:opacity-70 disabled:cursor-not-allowed group/btn">
                                     <span className="relative z-10 flex items-center gap-3">
                                         {isSubmitting ? 'TRANSMITTING...' : 'TRANSMIT INQUIRY'}
                                         <Send className="h-4 w-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
@@ -190,7 +190,7 @@ const Contact = () => {
                                 >
                                     <div className="flex items-center gap-3 mb-6">
                                         <span className="w-1.5 h-1.5 rounded-full bg-[#B8860B]"></span>
-                                        <h4 className="text-[14px] font-bold text-[#0F172A] uppercase tracking-[0.15em]">{office.city}</h4>
+                                        <h4 className="text-[0.875rem] font-bold text-[#0F172A] uppercase tracking-[0.15em]">{office.city}</h4>
                                     </div>
 
                                     <div className="space-y-6">
@@ -199,7 +199,7 @@ const Contact = () => {
                                                 <div className="h-10 w-10 rounded-full bg-[#F8FAFC] flex items-center justify-center text-[#B8860B] group-hover/item:bg-[#B8860B] group-hover/item:text-white transition-colors flex-shrink-0 mt-0.5 border border-gray-100">
                                                     <MapPin className="h-4 w-4" />
                                                 </div>
-                                                <span className="text-[15px] font-medium text-[#64748B] leading-relaxed pt-1">{office.address}</span>
+                                                <span className="text-[0.9375rem] font-medium text-[#64748B] leading-relaxed pt-1">{office.address}</span>
                                             </div>
                                         )}
                                         {office.phone && (
@@ -207,14 +207,14 @@ const Contact = () => {
                                                 <div className="h-10 w-10 rounded-full bg-[#F8FAFC] flex items-center justify-center text-[#B8860B] group-hover/item:bg-[#B8860B] group-hover/item:text-white transition-colors flex-shrink-0 border border-gray-100">
                                                     <Phone className="h-4 w-4" />
                                                 </div>
-                                                <a href={`tel:${office.phone.replace(/\s+/g, '')}`} className="text-[16px] font-bold text-[#0F172A] hover:text-[#B8860B] transition-colors">{office.phone}</a>
+                                                <a href={`tel:${office.phone.replace(/\s+/g, '')}`} className="text-[1rem] font-bold text-[#0F172A] hover:text-[#B8860B] transition-colors">{office.phone}</a>
                                             </div>
                                         )}
                                         <div className="flex gap-4 group/item items-center">
                                             <div className="h-10 w-10 rounded-full bg-[#F8FAFC] flex items-center justify-center text-[#B8860B] group-hover/item:bg-[#B8860B] group-hover/item:text-white transition-colors flex-shrink-0 border border-gray-100">
                                                 <Mail className="h-4 w-4" />
                                             </div>
-                                            <a href={`mailto:${office.email}`} className="text-[15px] font-medium text-[#0F172A] hover:text-[#B8860B] transition-colors break-all">{office.email}</a>
+                                            <a href={`mailto:${office.email}`} className="text-[0.9375rem] font-medium text-[#0F172A] hover:text-[#B8860B] transition-colors break-all">{office.email}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -231,7 +231,7 @@ const Contact = () => {
                         className="p-8 rounded-[1.5rem] bg-[#0A0F1C] border border-[#1E293B] shadow-2xl relative overflow-hidden group"
                     >
                         <div className="absolute top-0 right-0 w-40 h-40 bg-[#B8860B]/10 rounded-bl-full blur-[20px] group-hover:bg-[#B8860B]/20 transition-all duration-1000"></div>
-                        <h4 className="text-[13px] font-bold text-white/50 uppercase tracking-[0.2em] mb-6 relative z-10">Intelligence Network</h4>
+                        <h4 className="text-[0.8125rem] font-bold text-white/50 uppercase tracking-[0.2em] mb-6 relative z-10">Intelligence Network</h4>
                     </motion.div>
                 </div>
             </section>
@@ -240,3 +240,4 @@ const Contact = () => {
 }
 
 export default Contact
+

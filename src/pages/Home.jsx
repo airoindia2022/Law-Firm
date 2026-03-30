@@ -153,7 +153,7 @@ const AboutSection = () => (
                         <Link to="/contact" className="premium-btn">
                             Contact Us
                         </Link>
-                        <Link to="/team" className="px-8 py-4 border border-brand text-brand font-bold text-[13px] uppercase tracking-[0.3em] hover:bg-brand hover:text-white transition-all duration-500">
+                        <Link to="/team" className="px-8 py-4 border border-brand text-brand font-bold text-[0.8125rem] uppercase tracking-[0.3em] hover:bg-brand hover:text-white transition-all duration-500">
                             Our Team
                         </Link>
                     </div>
@@ -361,3 +361,4 @@ const Home = () => {
 };
 
 export default Home;
+

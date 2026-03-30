@@ -83,7 +83,7 @@ const Newsletters = () => {
                                     <div className="flex flex-col h-full bg-white p-8 md:p-12 rounded-[2rem] border border-border shadow-soft hover:shadow-premium transition-all duration-700">
                                         <div className="flex items-start justify-between mb-10">
                                             <div className="flex flex-col">
-                                                <div className="flex items-center gap-2 text-brand font-bold text-[12px] tracking-[0.2em] uppercase mb-2">
+                                                <div className="flex items-center gap-2 text-brand font-bold text-[0.75rem] tracking-[0.2em] uppercase mb-2">
                                                     <Calendar className="h-3 w-3" />
                                                     {item.month} {item.year}
                                                 </div>
@@ -172,7 +172,7 @@ const Newsletters = () => {
                                         {result || "Subscribe"}
                                     </button>
                                 </form>
-                                <p className="mt-4 text-[12px] text-white/30 uppercase tracking-[0.2em] ml-2">
+                                <p className="mt-4 text-[0.75rem] text-white/30 uppercase tracking-[0.2em] ml-2">
                                     Guaranteed privacy. Unsubscribe anytime.
                                 </p>
                             </div>
@@ -187,7 +187,7 @@ const Newsletters = () => {
                                     <div key={i} className="p-8 bg-white/5 border border-white/10 rounded-[2rem] backdrop-blur-md group hover:bg-white/10 transition-all duration-500">
                                         <badge.icon className="h-6 w-6 text-brand mb-4 opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all" />
                                         <h4 className="font-bold text-2xl mb-1 text-white">{badge.label}</h4>
-                                        <p className="text-white/50 text-[12px] uppercase tracking-[0.2em] font-bold">{badge.sub}</p>
+                                        <p className="text-white/50 text-[0.75rem] uppercase tracking-[0.2em] font-bold">{badge.sub}</p>
                                     </div>
                                 ))}
                             </div>
@@ -200,3 +200,4 @@ const Newsletters = () => {
 }
 
 export default Newsletters;
+

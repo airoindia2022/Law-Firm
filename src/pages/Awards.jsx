@@ -106,7 +106,7 @@ const Awards = () => {
                                         </div>
 
                                         <div className="flex items-center gap-2 mb-3">
-                                            <span className="text-[12px] font-bold uppercase tracking-[0.15em] text-brand/70 bg-brand/5 px-2 py-1 rounded-md">{item.year}</span>
+                                            <span className="text-[0.75rem] font-bold uppercase tracking-[0.15em] text-brand/70 bg-brand/5 px-2 py-1 rounded-md">{item.year}</span>
                                         </div>
 
                                         <h3 className="text-2xl font-bold font-display text-text-main mb-3 group-hover:text-brand transition-colors leading-tight">
@@ -202,3 +202,4 @@ const Awards = () => {
 }
 
 export default Awards
+
