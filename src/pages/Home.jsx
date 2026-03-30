@@ -71,7 +71,7 @@ const Hero = () => {
                     <div className="w-24 h-1 bg-brand mb-4"></div>
 
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-tight max-w-5xl tracking-tight">
-                        Recognized among the most trusted <span className="italic text-brand-light">Law firms in India</span>
+                        Integrity Legal Center the most trusted <span className="italic text-brand-light">Law firms </span>
                     </h1>
 
                     <div className="flex flex-col sm:flex-row gap-6 mt-8">
