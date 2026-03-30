@@ -17,6 +17,7 @@ import dispute from './asserts/dispute-resolution-1-1.jpg'
 
 export const MENU_ITEMS = [
     { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
     { name: 'Team', path: '/team' },
     {
         name: 'Practice Areas',
@@ -179,7 +180,6 @@ export const MENU_ITEMS = [
         ]
     },
     { name: 'Newsletters', path: '/newsletters' },
-    { name: 'Contact Us', path: '/contact' },
 ]
 
 export const TEAM_MEMBERS = [

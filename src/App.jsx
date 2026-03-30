@@ -9,6 +9,7 @@ import Team from './pages/Team'
 import PracticeAreas from './pages/PracticeAreas'
 import PracticeArea from './pages/PracticeArea'
 import Newsletters from './pages/Newsletters'
+import Services from './pages/Services'
 import Contact from './pages/Contact'
 
 import Navbar from './components/Navbar'
@@ -45,6 +46,7 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/team" element={<Team />} />
                     <Route path="/practice-areas" element={<PracticeAreas />} />
+                    <Route path="/services" element={<Services />} />
                     <Route path="/practice-areas/:slug" element={<PracticeArea />} />
                     <Route path="/newsletters" element={<Newsletters />} />
                     <Route path="/contact" element={<Contact />} />

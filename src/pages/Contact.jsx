@@ -222,17 +222,6 @@ const Contact = () => {
                         </div>
                     </motion.div>
 
-                    {/* Social Section */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="p-8 rounded-[1.5rem] bg-[#0A0F1C] border border-[#1E293B] shadow-2xl relative overflow-hidden group"
-                    >
-                        <div className="absolute top-0 right-0 w-40 h-40 bg-[#B8860B]/10 rounded-bl-full blur-[20px] group-hover:bg-[#B8860B]/20 transition-all duration-1000"></div>
-                        <h4 className="text-[0.8125rem] font-bold text-white/50 uppercase tracking-[0.2em] mb-6 relative z-10">Intelligence Network</h4>
-                    </motion.div>
                 </div>
             </section>
         </div>

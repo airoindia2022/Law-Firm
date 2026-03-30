@@ -57,6 +57,10 @@ const Footer = () => {
                                 <span className="w-0 h-0.5 bg-brand transition-all group-hover:w-4"></span>
                                 Meet Our Partners
                             </Link></li>
+                            <li><Link to="/services" className="hover:text-brand transition-colors flex items-center group gap-2">
+                                <span className="w-0 h-0.5 bg-brand transition-all group-hover:w-4"></span>
+                                Our Services
+                            </Link></li>
                             <li><Link to="/practice-areas" className="hover:text-brand transition-colors flex items-center group gap-2">
                                 <span className="w-0 h-0.5 bg-brand transition-all group-hover:w-4"></span>
                                 Practice Areas

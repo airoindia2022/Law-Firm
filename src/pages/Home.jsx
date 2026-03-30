@@ -78,8 +78,8 @@ const Hero = () => {
                         <Link to="/contact" className="w-full sm:w-auto px-8 py-4 bg-brand text-white font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-brand-light transition-all duration-500 shadow-premium-btn text-center">
                             Request Consultation
                         </Link>
-                        <Link to="/practice-areas" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-brand text-brand font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-brand hover:text-white transition-all duration-500 backdrop-blur-sm text-center">
-                            Our Expertise
+                        <Link to="/services" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-brand text-brand font-bold uppercase tracking-widest text-xs sm:text-sm hover:bg-brand hover:text-white transition-all duration-500 backdrop-blur-sm text-center">
+                            Our Services
                         </Link>
                     </div>
                 </motion.div>
@@ -227,8 +227,8 @@ const PracticeSection = () => {
                     ))}
                 </div>
                 <div className="mt-16 text-center">
-                    <Link to="/practice-areas" className="inline-flex items-center gap-4 text-brand font-bold uppercase tracking-widest text-sm hover:gap-6 transition-all group">
-                        Explore All Practice Areas <ArrowRight className="w-4 h-4" />
+                    <Link to="/services" className="inline-flex items-center gap-4 text-brand font-bold uppercase tracking-widest text-sm hover:gap-6 transition-all group">
+                        Explore All Services <ArrowRight className="w-4 h-4" />
                     </Link>
                 </div>
             </div>
