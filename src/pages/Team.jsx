@@ -82,12 +82,16 @@ const TeamMemberCard = ({ member, index, isLarge = false }) => {
 }
 
 const CategoryTitle = ({ title, tagline, description, center = false }) => (
-    <div className={`max-w-3xl mb-16 md:mb-24 ${center ? 'mx-auto text-center' : ''}`}>
-        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-display font-bold text-text-main mb-6 md:mb-8 leading-[1.1]">
+    <div className={`max-w-4xl mb-20 md:mb-32 ${center ? 'mx-auto text-center' : ''}`}>
+        <div className="flex items-center gap-4 mb-6">
+            <div className="h-px w-12 bg-[#B8860B]"></div>
+            <span className="text-[#B8860B] font-bold text-[0.7rem] tracking-[0.4em] uppercase">{tagline || "Expertise"}</span>
+        </div>
+        <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-display font-bold text-[#0F172A] mb-10 leading-[0.9] tracking-tighter">
             {title}
         </h2>
         {description && (
-            <p className="text-xl text-text-muted font-light leading-relaxed">
+            <p className="text-xl md:text-2xl text-[#64748B] font-light leading-relaxed max-w-2xl border-l border-[#B8860B]/20 pl-8 italic">
                 {description}
             </p>
         )}
@@ -128,62 +132,148 @@ const Team = () => {
     return (
         <div className="bg-white min-h-screen font-sans selection:bg-brand selection:text-white" ref={containerRef}>
             {/* 1. IMMERSIVE HERO SECTION */}
-            <header className="relative h-[90vh] min-h-[700px] flex items-center justify-center overflow-hidden bg-[#0A0F1C]">
-                {/* Visual Background */}
-                <motion.div style={{ y: heroY }} className="absolute inset-0 z-0">
-                    <img
-                        src={thero}
-                        alt="High-end Workspace"
-                        className="w-full h-full object-cover opacity-20 grayscale"
+            <header className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-[#0A0F1C]">
+                {/* Visual Background - Multi-layered */}
+                <div className="absolute inset-0 z-0 text-white/5">
+                    {/* Dark Grid Overlay */}
+                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+                        style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}>
+                    </div>
+                    
+                    {/* Animated Blobs */}
+                    <motion.div 
+                        animate={{ 
+                            scale: [1, 1.2, 1],
+                            x: [0, 100, 0],
+                            y: [0, -50, 0]
+                        }}
+                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        className="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] bg-[#B8860B]/10 rounded-full blur-[120px]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F1C]/50 via-transparent to-[#0A0F1C]"></div>
-                </motion.div>
+                    <motion.div 
+                        animate={{ 
+                            scale: [1.2, 1, 1.2],
+                            x: [0, -100, 0],
+                            y: [0, 50, 0]
+                        }}
+                        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                        className="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-[#B8860B]/5 rounded-full blur-[100px]"
+                    />
 
-                {/* Content */}
-                <div className="container mx-auto px-6 relative z-10 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                        className="max-w-5xl mx-auto"
-                    >
-                        <span className="inline-block text-brand font-bold text-[0.75rem] tracking-[0.5em] uppercase mb-8">
-                            Empowering Global Ambitions
-                        </span>
-                        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-white leading-[0.9] tracking-tighter mb-8 md:mb-12">
-                            The <span className="italic font-light text-brand">Architects</span> <br />
-                            of Strategy.
-                        </h1>
-                        <p className="text-lg md:text-2xl lg:text-3xl text-white/40 font-display italic font-light max-w-2xl mx-auto leading-relaxed px-4">
-                            "Innovation in thought, precision in execution. We are the partners to your global growth."
-                        </p>
+                    {/* Main Background Image with Parallax */}
+                    <motion.div style={{ y: heroY }} className="absolute inset-0 opacity-20 grayscale scale-110">
+                        <img
+                            src={thero}
+                            alt="High-end Workspace"
+                            className="w-full h-full object-cover"
+                        />
                     </motion.div>
+                    
+                    {/* Gradient Overlays */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F1C] via-transparent to-[#0A0F1C]"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F1C] via-transparent to-[#0A0F1C] opacity-50"></div>
                 </div>
 
-                {/* Scroll Indicator */}
+                {/* Content */}
+                <div className="container mx-auto px-6 relative z-10">
+                    <div className="flex flex-col items-center text-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                            className="max-w-6xl"
+                        >
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1, delay: 0.2 }}
+                                className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-12"
+                            >
+                                <span className="flex h-2 w-2 rounded-full bg-[#B8860B] animate-pulse"></span>
+                                <span className="text-white/80 font-bold text-[0.65rem] tracking-[0.4em] uppercase">
+                                    Empowering Global Ambitions
+                                </span>
+                            </motion.div>
+
+                            <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[11rem] font-display font-bold text-white leading-[0.85] tracking-tighter mb-10">
+                                <motion.span 
+                                    initial={{ opacity: 0, x: -50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 1.5, delay: 0.3 }}
+                                    className="block"
+                                >
+                                    The <p className="inline italic font-light text-[#B8860B]">Architects</p>
+                                </motion.span>
+                                <motion.span 
+                                    initial={{ opacity: 0, x: 50 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 1.5, delay: 0.5 }}
+                                    className="block mt-2"
+                                >
+                                    of Strategy.
+                                </motion.span>
+                            </h1>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1, delay: 1 }}
+                                className="relative py-8"
+                            >
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-[1px] bg-[#B8860B]/30"></div>
+                                <p className="text-lg md:text-3xl text-white/50 font-display italic font-light max-w-3xl mx-auto leading-relaxed px-4">
+                                    "Innovation in thought, precision in execution. We are the partners to your global growth."
+                                </p>
+                                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-[1px] bg-[#B8860B]/30"></div>
+                            </motion.div>
+                        </motion.div>
+                    </div>
+                </div>
+
+                {/* Scroll Indicator - Enhanced */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1.5, duration: 1 }}
-                    className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+                    transition={{ delay: 2, duration: 1 }}
+                    className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-6"
                 >
-                    <span className="text-white/20 text-[0.5625rem] uppercase tracking-[0.4em] font-bold">Discover</span>
-                    <div className="w-[1px] h-12 bg-gradient-to-b from-brand/50 to-transparent"></div>
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-white/20 text-[0.5rem] uppercase tracking-[0.6em] font-bold">Scroll to Discover</span>
+                        <motion.div 
+                            animate={{ y: [0, 10, 0] }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                            className="w-[1px] h-20 bg-gradient-to-b from-[#B8860B] to-transparent"
+                        />
+                    </div>
                 </motion.div>
+
+                {/* Side Labels */}
+                <div className="hidden lg:flex absolute left-12 top-1/2 -translate-y-1/2 flex-col items-center gap-24 opacity-20 hover:opacity-100 transition-opacity duration-500">
+                    <p className="rotate-90 text-[0.65rem] font-bold tracking-[0.5em] text-white uppercase whitespace-nowrap">INTEGRITY • EXCELLENCE</p>
+                </div>
+                <div className="hidden lg:flex absolute right-12 top-1/2 -translate-y-1/2 flex-col items-center gap-24 opacity-20 hover:opacity-100 transition-opacity duration-500">
+                    <p className="-rotate-90 text-[0.65rem] font-bold tracking-[0.5em] text-white uppercase whitespace-nowrap">GLOBAL PARTNERSHIP</p>
+                </div>
             </header>
 
             {/* 2. STAT STRIP */}
-            <section className="relative z-20 -mt-10 md:-mt-20 px-4 md:px-6">
-                <div className="max-w-7xl mx-auto bg-white shadow-2xl rounded-3xl md:rounded-[3rem] p-6 sm:p-8 md:p-12 lg:p-16 border border-neutral-100 flex flex-col md:flex-row items-center justify-around gap-8 md:gap-12">
+            <section className="relative z-20 -mt-16 md:-mt-24 px-4 md:px-6">
+                <div className="max-w-7xl mx-auto bg-white/80 backdrop-blur-2xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] rounded-[2.5rem] md:rounded-[4rem] p-8 md:p-16 border border-white/40 flex flex-col md:flex-row items-center justify-around gap-12 md:gap-16">
                     {[
                         { label: "Collective Expertise", val: "500+", detail: "Professional Years" },
                         { label: "Recognition", val: "Tier 1", detail: "Chambers Ranked" },
                         { label: "Capabilities", val: "PAN-INDIA", detail: "Full Service" }
                     ].map((stat, i) => (
-                        <div key={i} className="text-center group border-b md:border-b-0 border-neutral-100 pb-6 md:pb-0 last:border-0 w-full md:w-auto">
-                            <p className="text-[0.6875rem] md:text-[0.75rem] font-bold text-brand uppercase tracking-[0.12em] md:tracking-[0.14em] mb-2">{stat.label}</p>
-                            <p className="text-3xl md:text-5xl font-display font-bold text-text-main mb-1 group-hover:text-brand transition-colors">{stat.val}</p>
-                            <p className="text-[0.6875rem] md:text-[0.75rem] text-text-muted italic">{stat.detail}</p>
+                        <div key={i} className="text-center group w-full md:w-auto">
+                            <motion.div
+                                whileHover={{ y: -5 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <p className="text-[0.7rem] font-bold text-[#B8860B] uppercase tracking-[0.2em] mb-3">{stat.label}</p>
+                                <p className="text-4xl md:text-6xl font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B8860B] transition-colors">{stat.val}</p>
+                                <p className="text-[0.75rem] text-[#64748B] italic font-light tracking-wide">{stat.detail}</p>
+                            </motion.div>
+                            {i < 2 && <div className="hidden md:block absolute right-[-50%] top-1/2 -translate-y-1/2 h-12 w-[1px] bg-neutral-200"></div>}
                         </div>
                     ))}
                 </div>
@@ -235,61 +325,6 @@ const Team = () => {
                     </AnimatePresence>
                 </div>
             </main>
-
-            {/* 5. BRAND PHILOSOPHY SECTION */}
-            <section className="py-32 lg:py-48 bg-[#FDFCFB] border-y border-neutral-100 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-brand/[0.02] -skew-x-12 translate-x-20"></div>
-                <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                        <div className="space-y-12">
-                            <CategoryTitle
-                                title="Why Visionaries Choose Us."
-                                tagline="Our Philosophy"
-                            />
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
-                                {[
-                                    { title: "Pan-India Reach", detail: "Seamless legal services across every commercial hub in India.", icon: Globe },
-                                    { title: "Global Fluency", detail: "Advisory excellence spanning 25+ international jurisdictions.", icon: Target },
-                                    { title: "Elite Recognition", detail: "Tier 1 rankings from Chambers, IBLJ, and APAC Awards.", icon: Award },
-                                    { title: "Bespoke Solutions", detail: "Not just advice, but customized architectures for growth.", icon: Shield }
-                                ].map((item, i) => (
-                                    <div key={i} className="space-y-4 group">
-                                        <div className="w-12 h-12 rounded-2xl bg-white shadow-soft flex items-center justify-center group-hover:bg-brand transition-colors duration-500">
-                                            <item.icon className="w-5 h-5 text-brand group-hover:text-white" />
-                                        </div>
-                                        <h4 className="text-lg font-bold text-text-main group-hover:text-brand transition-colors tracking-tight uppercase">{item.title}</h4>
-                                        <p className="text-base text-text-muted font-light leading-snug">{item.detail}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="relative">
-                            <div className="aspect-[4/5] rounded-[4rem] overflow-hidden shadow-premium relative">
-                                <img
-                                    src={tim}
-                                    alt="Professionalism"
-                                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-                                />
-                                <div className="absolute inset-x-8 bottom-8 bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-neutral-100">
-                                    <Quote className="w-10 h-10 text-brand/20 mb-6" />
-                                    <p className="text-2xl md:text-3xl font-display italic text-text-main leading-relaxed mb-8">
-                                        "In legal practice, precision is not a goal—it is our fundamental baseline."
-                                    </p>
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white">
-                                            <Star className="w-4 h-4 fill-white" />
-                                        </div>
-                                        <div>
-                                            <p className="text-xs font-bold uppercase tracking-widest text-text-main">Legacy of Trust</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* 6. CALL TO ACTION */}
             <section className="py-24 bg-white">
