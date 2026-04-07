@@ -50,13 +50,13 @@ const Services = () => {
                             { name: 'Death Certificate', url: 'https://dc.crsorgi.gov.in/crs/' },
                             { name: 'Disability Certificate', url: 'https://www.swavlambancard.gov.in/' },
                             { name: 'Income Certificate', url: 'https://edistrict.up.gov.in/edistrictup/' },
-                            { name: 'Domicile Certificate', url: 'https://mpedistrict.gov.in/citizen/home.aspx' },
-                            { name: 'E Shram Card', url: 'https://eshram.gov.in/' },
-                            { name: 'Passport Apply', url: 'https://portal2.passportindia.gov.in/AppOnlineProject/welcomeLink' },
-                            { name: 'Caste Certificate', url: 'https://mpedistrict.gov.in/citizen/home.aspx' },
+                            { name: 'Domicile Certificate', url: 'https://services.india.gov.in/service/detail/apply-for-domicile-certificate-uttar-pradesh' },
+                            { name: 'E Shram Card', url: 'https://eshram.gov.in/indexmain' },
+                            { name: 'Passport Apply', url: 'https://services2.passportindia.gov.in/psp' },
+                            { name: 'Caste Certificate', url: 'https://edistrict.up.gov.in/edistrictup/' },
                             { name: 'PMJAY', url: 'https://pmjay.gov.in/' },
                             { name: 'Labour Card', url: 'https://labour.mp.gov.in/' },
-                            { name: 'Ration Card', url: 'https://nfsa.samagra.gov.in/' }
+                            { name: 'Ration Card', url: 'https://fcs.up.gov.in/' }
                         ].map((link, i) => (
                             <a
                                 key={i}
