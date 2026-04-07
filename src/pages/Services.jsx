@@ -93,11 +93,11 @@ const Services = () => {
                             { name: 'Add/Remove Partner', url: 'https://www.mca.gov.in/' },
                             { name: 'GST Correction', url: 'https://services.gst.gov.in/services/quicklinks/registration' },
                             { name: 'Section 8 Company', url: 'http://www.barcouncilofindia.org/' },
-                            { name: 'Income Tax Return', url: 'http://www.barcouncilofindia.org/' },
-                            { name: 'GST Return', url: 'http://www.barcouncilofindia.org/' },
-                            { name: 'FSSAI', url: 'http://www.barcouncilofindia.org/' },
-                            { name: 'TDS Return', url: 'http://www.barcouncilofindia.org/' },
-                            { name: 'TAN Registration', url: 'http://www.barcouncilofindia.org/' }
+                            { name: 'Income Tax Return', url: 'https://www.incometax.gov.in/iec/foportal/' },
+                            { name: 'GST Return', url: 'https://services.gst.gov.in/services/quicklinks/registration' },
+                            { name: 'FSSAI', url: 'https://foodlicensing.fssai.gov.in/cmsweb/Registration/NewRegistration' },
+                            { name: 'TDS Return', url: 'https://www.incometaxindia.gov.in/tax-services/file-tds-return' },
+                            { name: 'TAN Registration', url: 'https://www.incometax.gov.in/iec/foportal/help/taxdeductor/registration' }
                         ].map((link, i) => (
                             <a
                                 key={i}
