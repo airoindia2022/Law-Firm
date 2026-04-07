@@ -49,7 +49,7 @@ const Services = () => {
                             { name: 'Voter ID', url: 'https://voters.eci.gov.in/' },
                             { name: 'Death Certificate', url: 'https://dc.crsorgi.gov.in/crs/' },
                             { name: 'Disability Certificate', url: 'https://www.swavlambancard.gov.in/' },
-                            { name: 'Income Certificate', url: 'https://www.mpedistrict.gov.in/' },
+                            { name: 'Income Certificate', url: 'https://edistrict.up.gov.in/edistrictup/' },
                             { name: 'Domicile Certificate', url: 'https://mpedistrict.gov.in/citizen/home.aspx' },
                             { name: 'E Shram Card', url: 'https://eshram.gov.in/' },
                             { name: 'Passport Apply', url: 'https://portal2.passportindia.gov.in/AppOnlineProject/welcomeLink' },
