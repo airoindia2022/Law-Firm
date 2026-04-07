@@ -85,35 +85,6 @@ const Hero = () => {
                 </motion.div>
             </div>
 
-            {/* Navigation Controls */}
-            <div className="absolute bottom-12 left-0 w-full flex justify-center items-center gap-12 z-30">
-                <button
-                    onClick={prevSlide}
-                    className="hidden md:flex text-white/50 hover:text-white transition-colors items-center gap-4 text-sm font-bold uppercase tracking-[0.2em] group"
-                >
-                    <ChevronLeft className="w-5 h-5 group-hover:-translate-x-2 transition-transform" />
-                    PREV
-                </button>
-
-                <div className="flex gap-4">
-                    {heroSlides.map((_, idx) => (
-                        <button
-                            key={idx}
-                            onClick={() => setCurrentSlide(idx)}
-                            className={`w-12 h-[2px] transition-all duration-500 ${currentSlide === idx ? 'bg-brand w-20' : 'bg-white/20'}`}
-                        />
-                    ))}
-                </div>
-
-                <button
-                    onClick={nextSlide}
-                    className="hidden md:flex text-white/50 hover:text-white transition-colors items-center gap-4 text-sm font-bold uppercase tracking-[0.2em] group"
-                >
-                    NEXT
-                    <ChevronRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                </button>
-            </div>
-
             {/* Scroll Indicator */}
             <motion.div
                 animate={{ y: [0, 10, 0] }}
