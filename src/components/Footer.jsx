@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import logo from '../asserts/logo.jpg'
-import { Linkedin, Twitter, Facebook, MapPin, Phone, Mail, ArrowRight } from 'lucide-react'
+import {
+    Linkedin, Twitter, Facebook, Instagram, MapPin, Phone, Mail,
+    ArrowRight, GraduationCap, Scale, Heart, Briefcase, Globe,
+    Newspaper, Shield, Gavel, Building2, ExternalLink
+} from 'lucide-react'
 
 const Footer = () => {
     const [result, setResult] = React.useState("");
@@ -28,103 +33,183 @@ const Footer = () => {
         }
     };
 
+    const footerLinks = {
+        firm: [
+            { name: 'Meet Our Partners', path: '/team' },
+            { name: 'Our Services', path: '/services' },
+            { name: 'Practice Areas', path: '/practice-areas' },
+            { name: 'Latest Newsletters', path: '/newsletters' },
+            { name: 'Contact Us', path: '/contact' },
+        ],
+        practice: [
+            { name: 'Corporate & Commercial', path: '/practice-areas/corporate-commercial' },
+            { name: 'Real Estate Law', path: '/practice-areas/real-estate' },
+            { name: 'Education Law', path: '/practice-areas/education' },
+            { name: 'Intellectual Property', path: '/practice-areas/intellectual-property' },
+            { name: 'Dispute Resolution', path: '/practice-areas/dispute-resolution' },
+        ],
+        ecosystem: [
+            { name: 'Academics', url: 'https://airoindia.net', icon: GraduationCap },
+            { name: 'Legal', url: 'https://www.integritylegalcentre.in/', icon: Scale },
+            { name: 'Matrimony', url: 'https://shubhvivah.org.in/', icon: Heart },
+            { name: 'Jobs', url: 'https://jobcenterindia.com', icon: Briefcase },
+            { name: 'NGO', url: 'https://www.navnirmanwelfaresociety.in/', icon: Globe },
+            { name: 'News', url: 'https://www.hindustanradiance.co.in/', icon: Newspaper },
+        ]
+    }
+
     return (
-        <footer className="bg-[#0A0F1C] text-white pt-32 pb-16 relative overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand to-transparent opacity-50"></div>
-            <div className="absolute top-0 right-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+        <footer className="bg-[#0A0F1C] text-white pt-24 pb-12 relative overflow-hidden">
+            {/* Advanced Decorative Background */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-30"></div>
+            <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-brand/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-brand/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
-
-                    {/* Brand Column */}
-                    <div className="lg:col-span-4 flex flex-col items-start">
-                        <Link to="/" className="mb-10 bg-white p-3 rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.1)] group overflow-hidden relative">
-                            <img className="h-14 w-auto relative z-10" src={logo} alt="Integrity Legal Center" />
-                            <div className="absolute inset-0 bg-brand/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-                        </Link>
-                        <p className="text-white/60 text-xl leading-relaxed mb-10 font-light italic max-w-sm">
-                            "Your strategic partner in navigating complex global legal landscapes with integrity and innovation."
-                        </p>
+                {/* Upper Section: Brand & Newsletter */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20 border-b border-white/5">
+                    <div className="lg:col-span-5">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="flex flex-col items-start"
+                        >
+                            <Link to="/" className="mb-8 bg-white p-3 rounded-xl shadow-2xl group transition-transform hover:scale-105">
+                                <img className="h-12 w-auto" src={logo} alt="Integrity Legal Center" />
+                            </Link>
+                            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 leading-tight">
+                                Navigating Global Landscapes with <span className="text-brand">Integrity</span>.
+                            </h2>
+                            <div className="flex gap-4">
+                                {[Facebook, Twitter, Linkedin, Instagram].map((Icon, idx) => (
+                                    <motion.a
+                                        key={idx}
+                                        href="#"
+                                        whileHover={{ y: -5, color: '#B8860B' }}
+                                        className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 transition-colors hover:bg-white/10"
+                                    >
+                                        <Icon size={18} />
+                                    </motion.a>
+                                ))}
+                            </div>
+                        </motion.div>
                     </div>
 
-                    {/* Quick Links Column */}
-                    <div className="lg:col-span-2">
-                        <h4 className="text-base font-bold tracking-[0.2em] uppercase text-white mb-10 border-l-2 border-brand pl-4">The Firm</h4>
-                        <ul className="space-y-5 text-white/50 font-medium text-base">
-                            <li><Link to="/team" className="hover:text-brand transition-colors flex items-center group gap-2">
-                                <span className="w-0 h-0.5 bg-brand transition-all group-hover:w-4"></span>
-                                Meet Our Partners
-                            </Link></li>
-                            <li><Link to="/services" className="hover:text-brand transition-colors flex items-center group gap-2">
-                                <span className="w-0 h-0.5 bg-brand transition-all group-hover:w-4"></span>
-                                Our Services
-                            </Link></li>
-                            <li><Link to="/practice-areas" className="hover:text-brand transition-colors flex items-center group gap-2">
-                                <span className="w-0 h-0.5 bg-brand transition-all group-hover:w-4"></span>
-                                Practice Areas
-                            </Link></li>
-                            <li><Link to="/newsletters" className="hover:text-brand transition-colors flex items-center group gap-2">
-                                <span className="w-0 h-0.5 bg-brand transition-all group-hover:w-4"></span>
-                                Newsletter
-                            </Link></li>
+                    <div className="lg:col-span-4 lg:col-start-9">
+                        <div className="flex flex-col gap-6">
+                            <div>
+                                <h3 className="text-lg font-bold text-white mb-2">Strategic Insights</h3>
+                                <p className="text-white/40 text-sm">Subscribe for monthly legal updates and firm announcements.</p>
+                            </div>
+                            <form onSubmit={onSubmit} className="relative group max-w-sm">
+                                <input
+                                    name="email"
+                                    type="email"
+                                    required
+                                    placeholder="Corporate Email"
+                                    className="w-full bg-white/5 border border-white/10 rounded-full px-5 py-3 text-sm focus:outline-none focus:border-brand/50 transition-all text-white placeholder:text-white/20"
+                                />
+                                <button type="submit" className="absolute right-1.5 top-1.5 bottom-1.5 px-5 bg-brand text-white rounded-full text-[0.65rem] font-bold tracking-widest uppercase hover:bg-brand-light transition-all shadow-lg active:scale-95">
+                                    {result || "Join"}
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Main Links Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-20">
+                    {/* The Firm */}
+                    <div className="col-span-1">
+                        <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-brand mb-8">The Firm</h4>
+                        <ul className="space-y-4">
+                            {footerLinks.firm.map((link, idx) => (
+                                <li key={idx}>
+                                    <Link to={link.path} className="text-white/50 hover:text-white transition-colors text-sm flex items-center group">
+                                        <ArrowRight size={14} className="mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-brand" />
+                                        {link.name}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    {/* Contact Column */}
-                    <div className="lg:col-span-3">
-                        <h4 className="text-base font-bold tracking-[0.2em] uppercase text-white mb-10 border-l-2 border-brand pl-4">Global Reach</h4>
-                        <div className="space-y-8">
-                            <div className="flex items-start gap-4 group">
-                                <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-brand/20 transition-colors">
-                                    <MapPin className="w-5 h-5 text-brand" />
+                    {/* Practice Areas */}
+                    <div className="col-span-1">
+                        <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-brand mb-8">Practice</h4>
+                        <ul className="space-y-4">
+                            {footerLinks.practice.map((link, idx) => (
+                                <li key={idx}>
+                                    <Link to={link.path} className="text-white/50 hover:text-white transition-colors text-sm flex items-center group">
+                                        <ArrowRight size={14} className="mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-brand" />
+                                        {link.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Ecosystem */}
+                    <div className="col-span-1">
+                        <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-brand mb-8">Ecosystem</h4>
+                        <ul className="space-y-4">
+                            {footerLinks.ecosystem.map((link, idx) => (
+                                <li key={idx}>
+                                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors text-sm flex items-center group">
+                                        <link.icon size={16} className="mr-3 text-brand/70 group-hover:text-brand transition-colors" />
+                                        {link.name}
+                                        <ExternalLink size={12} className="ml-2 opacity-0 group-hover:opacity-50 transition-opacity" />
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Global Presence */}
+                    <div className="col-span-2 lg:col-span-2">
+                        <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-brand mb-8">Global Presence</h4>
+                        <div className="space-y-6">
+                            <div className="flex items-start gap-4">
+                                <div className="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0">
+                                    <MapPin size={20} className="text-brand" />
                                 </div>
-                                <div className="text-white/50 leading-relaxed text-base">
-                                    <p className="text-white font-bold mb-1">Delhi (HQ)</p>
-                                    <p> near tis hazari court adjacent to St. Stephen's Hospital</p>
+                                <div className="text-white/50 text-sm leading-relaxed">
+                                    <p className="text-white font-bold mb-1 italic">Delhi Headquarters</p>
+                                    <p>Near Tis Hazari Court, Adjacent to St. Stephen's Hospital</p>
                                     <p>Delhi, India</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 group">
-                                <a className='flex items-center gap-4 group' href="tel:+917668392730">
-                                    <div className="p-3 rounded-xl bg-white/5 border border-white/10 group-hover:bg-brand/20 transition-colors">
-                                        <Phone className="w-5 h-5 text-brand" />
-                                    </div>
-                                    <div className="text-white/50 font-medium text-base">
-                                        <p className="text-white font-bold mb-1">Inquiry</p>
-                                        <p>+91 7668392730</p>
-                                    </div>
+                                <div className="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0 group-hover:bg-brand/20 transition-colors">
+                                    <Phone size={20} className="text-brand" />
+                                </div>
+                                <a href="tel:+917668392730" className="text-white/50 hover:text-white transition-colors text-sm font-medium">
+                                    +91 7668392730
+                                </a>
+                            </div>
+                            <div className="flex items-center gap-4 group">
+                                <div className="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0 group-hover:bg-brand/20 transition-colors">
+                                    <Mail size={20} className="text-brand" />
+                                </div>
+                                <a href="mailto:info@integritylegal.in" className="text-white/50 hover:text-white transition-colors text-sm font-medium">
+                                    info@integritylegal.in
                                 </a>
                             </div>
                         </div>
                     </div>
-
-                    {/* Newsletter Column */}
-                    <div className="lg:col-span-3">
-                        <h4 className="text-base font-bold tracking-[0.2em] uppercase text-white mb-10 border-l-2 border-brand pl-4">Newsletter</h4>
-                        <p className="text-white/50 text-base mb-8 leading-relaxed">Subscribe to receive strategic legal insights and firm updates.</p>
-                        <form onSubmit={onSubmit} className="relative group">
-                            <input
-                                name="email"
-                                type="email"
-                                required
-                                placeholder="Corporate Email"
-                                className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-base focus:outline-none focus:border-brand/50 focus:bg-white/10 transition-all text-white placeholder:text-white/30"
-                            />
-                            <button type="submit" className="absolute right-2 top-2 bottom-2 px-6 bg-brand text-white rounded-full text-[0.75rem] font-bold tracking-widest uppercase hover:bg-brand-light transition-all shadow-lg active:scale-95">
-                                {result || "Join"}
-                            </button>
-                        </form>
-                    </div>
-
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <p className="text-white/30 text-[0.8125rem] font-bold tracking-widest uppercase">
-                        © {new Date().getFullYear()} <a className="hover:text-brand transition-colors underline-offset-4 hover:underline" href="https://airo-india.vercel.app/">AIRO India</a>. All Rights Reserved.
-                    </p>
+                <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold tracking-widest uppercase text-white/30">
+                    <p>© {new Date().getFullYear()} Integrity Legal Centre. All Rights Reserved.</p>
+                    <div className="flex gap-8">
+                        <a href="#" className="hover:text-brand transition-colors">Privacy Policy</a>
+                        <a href="#" className="hover:text-brand transition-colors">Terms of Service</a>
+                        <a href="https://airo-india.vercel.app/" className="text-brand hover:text-brand-light transition-colors">
+                            Powered by AIRO India
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
