@@ -174,14 +174,14 @@ const Contact = () => {
                                 {
                                     city: 'Delhi HQ',
                                     address: ' near tis hazari court adjacent to St. Stephen\'s Hospital, Delhi, India',
-                                    phone: '+91 7668392730',
+                                    phone: '+91 9956201489',
                                     email: 'integritylegalcentre@gmail.com',
                                 },
                                 {
                                     city: 'Lucknow ',
                                     address: '23/B, new friends colony behind DPS school , Jankipuram Extension , Lucknow up',
-                                    phone: '+91 7668392730',
-                                    email: 'advocateyhsiddiqui@gmail.com',
+                                    phone: '+91 9956201489',
+                                    // email: 'advocateyhsiddiqui@gmail.com',
                                 }
                             ].map((office, idx) => (
                                 <div
@@ -210,12 +210,12 @@ const Contact = () => {
                                                 <a href={`tel:${office.phone.replace(/\s+/g, '')}`} className="text-[1rem] font-bold text-[#0F172A] hover:text-[#B8860B] transition-colors">{office.phone}</a>
                                             </div>
                                         )}
-                                        <div className="flex gap-4 group/item items-center">
+                                        {/* <div className="flex gap-4 group/item items-center">
                                             <div className="h-10 w-10 rounded-full bg-[#F8FAFC] flex items-center justify-center text-[#B8860B] group-hover/item:bg-[#B8860B] group-hover/item:text-white transition-colors flex-shrink-0 border border-gray-100">
                                                 <Mail className="h-4 w-4" />
                                             </div>
                                             <a href={`mailto:${office.email}`} className="text-[0.9375rem] font-medium text-[#0F172A] hover:text-[#B8860B] transition-colors break-all">{office.email}</a>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             ))}

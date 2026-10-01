@@ -192,8 +192,8 @@ const Footer = () => {
                                 <div className="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center shrink-0 group-hover:bg-brand/20 transition-colors">
                                     <Mail size={20} className="text-brand" />
                                 </div>
-                                <a href="mailto:info@integritylegal.in" className="text-white/50 hover:text-white transition-colors text-sm font-medium">
-                                    info@integritylegal.in
+                                <a href="mailto:integritylegalcentre@gmail.com" className="text-white/50 hover:text-white transition-colors text-sm font-medium">
+                                    integritylegalcentre@gmail.com
                                 </a>
                             </div>
                         </div>
