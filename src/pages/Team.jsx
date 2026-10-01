@@ -87,7 +87,7 @@ const CategoryTitle = ({ title, tagline, description, center = false }) => (
             <div className="h-px w-12 bg-[#B8860B]"></div>
             <span className="text-[#B8860B] font-bold text-[0.7rem] tracking-[0.4em] uppercase">{tagline || "Expertise"}</span>
         </div>
-        <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-display font-bold text-[#0F172A] mb-10 leading-[0.9] tracking-tighter">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[#0F172A] mb-10 leading-[1] tracking-tight">
             {title}
         </h2>
         {description && (
@@ -195,7 +195,7 @@ const Team = () => {
                                 </span>
                             </motion.div>
 
-                            <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[11rem] font-display font-bold text-white leading-[0.85] tracking-tighter mb-10">
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[1] tracking-tight mb-10">
                                 <motion.span 
                                     initial={{ opacity: 0, x: -50 }}
                                     animate={{ opacity: 1, x: 0 }}
@@ -270,7 +270,7 @@ const Team = () => {
                                 transition={{ duration: 0.3 }}
                             >
                                 <p className="text-[0.7rem] font-bold text-[#B8860B] uppercase tracking-[0.2em] mb-3">{stat.label}</p>
-                                <p className="text-4xl md:text-6xl font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B8860B] transition-colors">{stat.val}</p>
+                                <p className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B8860B] transition-colors">{stat.val}</p>
                                 <p className="text-[0.75rem] text-[#64748B] italic font-light tracking-wide">{stat.detail}</p>
                             </motion.div>
                             {i < 2 && <div className="hidden md:block absolute right-[-50%] top-1/2 -translate-y-1/2 h-12 w-[1px] bg-neutral-200"></div>}
@@ -341,7 +341,7 @@ const Team = () => {
                                     <div className="h-px w-8 bg-brand"></div>
                                     <span className="text-brand font-bold text-[0.75rem] tracking-[0.4em] uppercase">Strategic Intersection</span>
                                 </div>
-                                <h2 className="text-4xl sm:text-6xl md:text-8xl font-display font-bold mb-8 text-white leading-[0.9] tracking-tighter">
+                                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-8 text-white leading-[1] tracking-tight">
                                     Discuss your next <br />
                                     <span className="text-brand italic font-light">strategic milestone.</span>
                                 </h2>

@@ -23,7 +23,7 @@ const Services = () => {
                             <span className="text-secondary font-bold text-sm tracking-widest uppercase">Comprehensive Legal Services</span>
                         </div>
 
-                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold font-display text-text-main leading-tight mb-6 md:mb-8">
+                        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display text-text-main leading-tight mb-6 md:mb-8">
                             Essential <span className="gradient-text italic">Resources.</span>
                         </h1>
 

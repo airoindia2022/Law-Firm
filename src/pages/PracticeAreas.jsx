@@ -45,7 +45,7 @@ const PracticeAreaCard = ({ name, path, image, description, index }) => (
 )
 
 const PracticeAreas = () => {
-    const practiceAreas = MENU_ITEMS[2].submenu;
+    const practiceAreas = MENU_ITEMS.find(item => item.name === 'Practice Areas')?.submenu || [];
 
     return (
         <div className="bg-background min-h-screen pt-32 pb-48 overflow-hidden subtle-pattern">
@@ -62,7 +62,7 @@ const PracticeAreas = () => {
                                 <span className="text-secondary font-bold text-sm tracking-widest uppercase">Specialized Advisory</span>
                             </div>
 
-                            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold font-display text-text-main leading-tight mb-6 md:mb-8">
+                            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display text-text-main leading-tight mb-6 md:mb-8">
                                 Infinite <br />
                                 <span className="gradient-text italic">Expertise.</span>
                             </h1>

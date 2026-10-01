@@ -52,8 +52,8 @@ const Newsletters = () => {
                             <span className="w-12 h-[1px] bg-brand"></span>
                             <span className="text-brand font-bold text-sm tracking-[0.3em] uppercase">Intelligence & Insights</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl lg:text-9xl font-display font-bold text-primary mb-6 md:mb-8 leading-[0.9]">
-                            Legal <br />
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-primary mb-6 md:mb-8 leading-[1]">
+                            Legal {" "}
                             <span className="italic font-normal text-brand-light">Briefings.</span>
                         </h1>
                         <p className="text-2xl text-text-muted leading-relaxed max-w-2xl font-light">

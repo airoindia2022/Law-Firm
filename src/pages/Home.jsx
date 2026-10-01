@@ -70,7 +70,7 @@ const Hero = () => {
                 >
                     <div className="w-24 h-1 bg-brand mb-4"></div>
 
-                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white leading-[1.1] max-w-5xl tracking-tight px-2">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-[1.1] max-w-5xl tracking-tight px-2">
                         Integrity Legal Center <br className="hidden md:block" /> the most trusted <span className="italic text-brand-light">Law firm</span>
                     </h1>
 
