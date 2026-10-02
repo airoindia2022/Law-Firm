@@ -8,7 +8,8 @@ import phero from '../asserts/hero1.jpeg'
 
 const PracticeArea = () => {
     const { slug } = useParams()
-    const area = MENU_ITEMS[2].submenu?.find(sub => sub.path.includes(slug)) || {}
+    const practiceAreasSubmenu = MENU_ITEMS.find(item => item.name === 'Practice Areas')?.submenu || []
+    const area = practiceAreasSubmenu.find(sub => sub.path && sub.path.includes(slug)) || {}
 
     if (!area.name) return <div className="p-20 text-center font-bold font-display uppercase tracking-widest text-brand bg-background h-screen flex items-center justify-center">Resource Not Found</div>
 
@@ -58,7 +59,7 @@ const PracticeArea = () => {
                         <div className="inline-block px-4 py-2 bg-white rounded-full shadow-sm border border-border mb-8">
                             <span className="text-secondary font-bold text-sm tracking-widest uppercase">Core Domain Expertise</span>
                         </div>
-                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-display font-bold text-text-main leading-tight mb-8">
+                        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-text-main leading-tight mb-8">
                             {area.name}
                         </h1>
                         <p className="text-lg md:text-2xl text-text-muted leading-relaxed font-light italic max-w-2xl border-l-2 border-brand/20 pl-6 md:pl-8">
@@ -106,7 +107,7 @@ const PracticeArea = () => {
                         <div className="card-light p-8 md:p-10 relative overflow-hidden group">
                             <h4 className="text-brand font-bold mb-10 text-xs uppercase tracking-widest">Global Expertise</h4>
                             <div className="space-y-6">
-                                {MENU_ITEMS[2].submenu?.filter(s => s.path && !s.path.includes(slug)).slice(0, 6).map(s => (
+                                {practiceAreasSubmenu.filter(s => s.path && !s.path.includes(slug)).slice(0, 6).map(s => (
                                     <Link key={s.name} to={s.path} className="group block">
                                         <div className="flex items-center justify-between border-b border-border pb-4 hover:border-brand/40 transition-colors">
                                             <span className="text-base font-semibold text-text-muted group-hover:text-brand transition-colors">

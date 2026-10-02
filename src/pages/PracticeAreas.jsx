@@ -63,7 +63,7 @@ const PracticeAreas = () => {
                             </div>
 
                             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display text-text-main leading-tight mb-6 md:mb-8">
-                                Infinite <br />
+                                Infinite{" "}
                                 <span className="gradient-text italic">Expertise.</span>
                             </h1>
 

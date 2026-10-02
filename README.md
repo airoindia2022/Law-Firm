@@ -22,45 +22,6 @@ A premium, modern, and responsive law firm website built with React, Vite, Tailw
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Routing**: [React Router DOM v6](https://reactrouter.com/)
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd law-firm
-   ```
-
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-### Development
-
-Start the local development server:
-```bash
-npm run dev
-```
-The application will be available at `http://localhost:5173`.
-
-### Production
-
-Build the application for production:
-```bash
-npm run build
-```
-The optimized build will be generated in the `dist` folder.
 
 ## 📁 Project Structure
 
